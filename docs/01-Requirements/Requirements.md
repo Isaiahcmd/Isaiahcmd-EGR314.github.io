@@ -1,9 +1,9 @@
 ---
-title: Module's Requirements
+title: Tempurature/Humidity Module Requirements
 ---
 
 ## Module Requirements
-The following sections document the requirements that the this module need to fulfills to .....
+The following sections document the requirements that the this module need to fulfill to accurately sense and trasmit soil tempurature and ambient humidity to the user.
 
 | **Requirement Description** | **Measure of<br> Threshold** | **Target<br>Measure** |**Stretch<br>Requirement<br>(Y-N)**|
 |-----------------------------| ----------------- | ----------------- | :-----: |
