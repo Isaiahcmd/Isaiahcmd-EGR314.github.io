@@ -27,7 +27,8 @@ This subsystem existes to allow users to remotely observe soil temperature and r
 * This needs to be updated to reflect a team introduction
 * Content should also help an unfamiliar reader navigate to areas of interest. Information like:
 
-To veiw the block diagram of this subsystem for information on the general layout of this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/02-Block-Diagram/Block-Diagram/])
-To veiw the bill of materials of this subsystem for information on materials and parts click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/04-BOM/BOM/])
+*To veiw the block diagram of this subsystem for information on the general layout of this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/02-Block-Diagram/Block-Diagram/])
+
+*To veiw the bill of materials of this subsystem for information on materials and parts click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/04-BOM/BOM/])
 
 
