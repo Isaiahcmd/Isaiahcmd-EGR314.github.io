@@ -7,7 +7,7 @@ tags:
 <center>
 <font size= "6">Isaiah Johnston Datasheet</font><br>
 as part of<br>
-<font size= "8"> Project Name</font><br>
+<font size= "8"> Temperature / Humidity Module</font><br>
 for<br>
 <font size= "5"> Team 202 </font><br>
 
@@ -16,18 +16,18 @@ for<br>
 
 ## Introduction
 
-* **This needs to be updated so that a reader gets an idea of the purpose of this datasheet.**
+This data sheet exists to describe the design and function of the temperature / humidity module subsystem.
 
 ### Project Summary
 
-* This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.
-* Add context that ties into the link to your [team report.](https://EGR314-S-2026-202.github.io)
+This subsystem existes to allow users to remotely observe soil temperature and relative humidity levels as part of the CropScout exploritory drone. a link to the full product report can be found [here.](https://EGR314-S-2026-202.github.io)
 
 ### My Contribution
 
 * This needs to be updated to reflect a team introduction
 * Content should also help an unfamiliar reader navigate to areas of interest. Information like:
 
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/) section of the datasheet.
+To veiw the block diagram of this subsystem for information on the general layout of this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/02-Block-Diagram/Block-Diagram/])
+To veiw the bill of materials of this subsystem for information on materials and parts click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/04-BOM/BOM/])
 
->Continue for all the remaining/missing sections.
+
