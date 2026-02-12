@@ -35,31 +35,67 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 *Table 1: Example component selection*
 
-**External Clock Module**
+**Moisture Sensor**
 
-| **Component**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](image1.png)<br> XC1259TR-ND surface mount crystal<br>$1/each<br>[link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)                 | \* Inexpensive[^1]<br>\* Compatible with PSoC<br>\* Meets surface mount constraint of project                                               | \* Requires external components and support circuitry for interface<br>\* Needs special PCB layout. |
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![](image)<br>**SHT45-AD1B-R2A0/A1 humidity sensor**<br>$3–4/each<br>[link to product](link) | • High RH accuracy and long-term stability<br>• Digital I²C output simplifies PCB design (no analog conditioning)<br>• Low power operation suitable for embedded environmental nodes | • Higher cost than lower-accuracy RH sensors<br>• Requires careful placement away from heat sources for accurate readings<br>• Needs environmental protection (filter or coating) to avoid contamination drift |
+| ![](image)<br>**SHT41-AD1B humidity sensor**<br>$2–3/each<br>[link to product](link) | • Good accuracy-to-cost ratio<br>• I²C interface enables simple firmware integration<br>• Compact surface-mount package | • Slightly lower performance compared to SHT45<br>• Sensitive to condensation/contamination without protection<br>• Placement airflow affects measurement accuracy |
+| ![](image)<br>**HDC3022 humidity sensor**<br>$2–3.5/each<br>[link to product](link) | • High accuracy alternative supply chain to Sensirion parts<br>• I²C interface with simple integration<br>• Stable performance across wide environmental conditions | • Requires careful layout and decoupling for best accuracy<br>• Placement must minimize self-heating effects<br>• Availability may vary depending on package/SKU |
+
 
 **Rationale:** A clock oscillator is easier ....
 
-### Style 2
+**Op-Amp**
 
-> Also acceptable, more markdown friendly
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![](image)<br>**OPA333 precision op-amp**<br>$1.50/each<br>[link to product](link) | • Very low input offset voltage ideal for precision RTD current sources<br>• Zero-drift architecture provides excellent long-term stability<br>• Rail-to-rail input/output operation suitable for low-voltage systems | • Higher cost than general-purpose op-amps<br>• Limited bandwidth compared to high-speed amplifiers<br>• Slightly higher quiescent current than ultra-low-power options |
+| ![](image)<br>**MCP6001 general-purpose op-amp**<br>$0.40/each<br>[link to product](link) | • Very low cost and widely available<br>• Rail-to-rail operation works well in 3.3 V systems<br>• Low power consumption suitable for battery-powered nodes | • Higher offset voltage reduces precision for RTD circuits<br>• Lower accuracy over temperature compared to precision op-amps<br>• Moderate noise performance for sensitive measurement circuits |
+| ![](image)<br>**LT6015 precision op-amp**<br>$2.50/each<br>[link to product](link) | • Very low offset voltage and drift suitable for precision current generation<br>• Excellent noise performance for accurate sensor measurements<br>• Good temperature stability across wide ranges | • Higher cost than low-power devices<br>• Slightly higher power consumption<br>• May be unnecessary for moderate-accuracy environmental sensing |
 
-**External Clock Module**
+**Rationale:** A clock oscillator is easier ....
 
-1. XC1259TR-ND surface mount crystal
+**Voltage Reference IC**
 
-    ![](image1.png)
 
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
 
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
 
-**Rationale:** A clock oscillator is easier ...
+
+
+
+
+
+
+
+**Hot-Swap I**
+
+
+
+
+
+
+
+
+
+
+**Op-Amp**
+
+
+
+
+
+
+
+
+
+**Op-Amp**
+
+
+
+
+
+
+
+
+**Op-Amp**
