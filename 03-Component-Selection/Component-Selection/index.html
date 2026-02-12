@@ -988,10 +988,117 @@
 </table>
 <p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
 <p><strong>Voltage Reference IC</strong></p>
-<p><strong>Hot-Swap I</strong></p>
-<p><strong>Op-Amp</strong></p>
-<p><strong>Op-Amp</strong></p>
-<p><strong>Op-Amp</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>ADR4525 precision reference</strong><br>$3.50/each<br><a href="link">link to product</a></td>
+<td>• Very low temperature drift for stable ADC measurements<br>• High initial accuracy supports consistent calibration<br>• Low noise improves precision readings</td>
+<td>• Higher cost than basic references<br>• Requires careful PCB layout and decoupling<br>• Fixed output voltage</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>TL431A adjustable reference</strong><br>$0.20/each<br><a href="link">link to product</a></td>
+<td>• Very inexpensive and widely available<br>• Adjustable output using external resistors<br>• Useful as reference or regulator</td>
+<td>• Higher noise and drift<br>• Requires bias current to operate<br>• Accuracy depends on external components</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>REF3325 precision reference</strong><br>$1.60/each<br><a href="link">link to product</a></td>
+<td>• Low quiescent current ideal for battery systems<br>• Good accuracy and low drift<br>• Compatible with many ADC ranges</td>
+<td>• Not as low-drift as premium references<br>• Limited output current capability<br>• Requires clean layout for best performance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Hot-Swap I<sup>2</sup>C Buffer</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>TCA4311A I²C buffer</strong><br>$1.40/each<br><a href="link">link to product</a></td>
+<td>• Enables live insertion/removal of I²C devices<br>• Built-in rise-time accelerator improves signal integrity<br>• Minimal external components required</td>
+<td>• Adds small propagation delay<br>• Must be placed near connector boundary<br>• Signal-level protection only</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>PCA9511A I²C buffer</strong><br>$1.20/each<br><a href="link">link to product</a></td>
+<td>• Industry-standard hot-swap solution<br>• Protects bus during hot-plug events<br>• Supports standard and fast I²C modes</td>
+<td>• Increases bus capacitance slightly<br>• Limited diagnostics<br>• Requires proper pull-up sizing</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>LTC4300A I²C buffer</strong><br>$2.00/each<br><a href="link">link to product</a></td>
+<td>• Bus pre-charge minimizes insertion glitches<br>• Good for industrial environments<br>• Helps isolate faulty downstream devices</td>
+<td>• Slightly higher cost<br>• Requires careful layout<br>• Additional design considerations for segmentation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Power Regulator</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>XL1509-3.3 buck regulator</strong><br>$1/each<br><a href="link">link to product</a></td>
+<td>• Simple fixed 3.3 V design<br>• Handles high input voltages<br>• Low cost</td>
+<td>• Lower switching frequency requires larger passives<br>• Higher ripple/EMI<br>• Lower efficiency at light loads</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>TPS62172 synchronous buck</strong><br>$3/each<br><a href="link">link to product</a></td>
+<td>• High efficiency across load range<br>• Smaller external components<br>• Cleaner output rail</td>
+<td>• Higher cost<br>• Requires careful layout<br>• Narrower input range</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>MP1584EN buck regulator</strong><br>$1.50/each<br><a href="link">link to product</a></td>
+<td>• Good performance for cost<br>• Smaller magnetics than older regulators<br>• Widely used design option</td>
+<td>• EMI depends heavily on layout<br>• Variant documentation differences<br>• Not ultra-low-noise</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>MOSFET Options</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>AO3407A P-MOSFET</strong><br>$0.30/each<br><a href="link">link to product</a></td>
+<td>• Low Rds(on) for efficient switching<br>• Compact SOT-23 package<br>• Common high-side switching device</td>
+<td>• Limited current handling<br>• Thermal limits of small package<br>• Gate-drive margin must be verified</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>SI2301CDS P-MOSFET</strong><br>$0.40/each<br><a href="link">link to product</a></td>
+<td>• Good balance of cost and performance<br>• Widely available<br>• Suitable for 3.3 V and 5 V switching</td>
+<td>• Slightly higher Rds(on)<br>• Limited dissipation capability<br>• Requires gate resistor design</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>DMG2305UX P-MOSFET</strong><br>$0.50/each<br><a href="link">link to product</a></td>
+<td>• Very low on-resistance<br>• Compact package<br>• Good for moderate current switching</td>
+<td>• Thermal limitations<br>• Gate-threshold must be checked<br>• Slightly higher cost</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
 
 
 
