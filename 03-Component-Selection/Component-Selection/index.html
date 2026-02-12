@@ -630,15 +630,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -869,15 +860,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -923,14 +905,6 @@
 <p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your <strong>Selected</strong> the actuator items go, which includes both the driver and motor. Otherwise, remove this section.)</p>
 <p>For more details, review the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/Appendix/01-Componet-Selection/Component-Selection-Process/#actuator">"Appendix - Component Selection Process - Actuator"</a> selection.</p>
 <hr>
-<blockquote>
-<p>Remove the following before submitting! Use them to present the selected components</p>
-</blockquote>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
 <p><strong>Moisture Sensor</strong></p>
 <table>
 <thead>
@@ -1099,6 +1073,117 @@
 </tbody>
 </table>
 <p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Temperature Sensor</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>PT1000 Temperature Sensor Probe (1597-314010819-ND)</strong><br>$9.90/each<br><a href="link">link to product</a></td>
+<td>• Very high accuracy and long-term stability<br>• Excellent repeatability<br>• Wide temperature range (−200°C to 600°C)<br>• Easy calibration</td>
+<td>• Requires precision current source<br>• More expensive than thermistors or digital sensors<br>• Wiring resistance must be compensated</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>Digital Temperature Probe (SNS-TMP-DS18B20-MAXIM)</strong><br>$5.33/each<br><a href="link">link to product</a></td>
+<td>• Simple PCB interface<br>• No precision analog circuitry required<br>• Factory calibrated</td>
+<td>• Slower response time than exposed RTD<br>• Accuracy lower than PT1000<br>• Less stable long-term</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>THERM NTC 10KOHM 3988K Probe (B57800K0103A001)</strong><br>$5.22/each<br><a href="link">link to product</a></td>
+<td>• Least expensive<br>• High sensitivity<br>• Simple voltage divider readout</td>
+<td>• Non-linear resistance, needs calibration<br>• Accuracy depends heavily on calibration<br>• Self-heating errors if measurement current is too high</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale</strong></p>
+<p><strong>Precision Resistor</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>PATT0603E1002BGT1 thin-film resistor</strong><br>$0.80/each<br><a href="link">link to product</a></td>
+<td>• High precision tolerance (0.1%) suitable for sensor reference networks<br>• Good temperature stability (10–25 ppm/°C) for consistent measurements<br>• Compact 0603 SMD package ideal for small PCB layouts</td>
+<td>• Lower power handling compared to larger package resistors<br>• More expensive than standard thick-film resistors<br>• Long-term drift is higher than ultra-precision metal-foil resistors</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>Y145310K0000T9L metal foil resistor</strong><br>$40.00/each<br><a href="link">link to product</a></td>
+<td>• Extremely high precision (0.01% tolerance)<br>• Very low temperature coefficient (~2 ppm/°C) for highly stable measurements<br>• Excellent long-term stability and minimal drift</td>
+<td>• Significantly more expensive than thin-film precision resistors<br>• Larger footprint compared to standard SMD thin-film resistors<br>• Performance benefits may exceed requirements for typical embedded sensor applications</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>RC0603BR-0710KL thin-film resistor</strong><br>$0.20/each<br><a href="link">link to product</a></td>
+<td>• Low cost while maintaining 0.1% precision tolerance<br>• Good temperature stability (~25 ppm/°C) suitable for sensor reference networks<br>• Small SMD package ideal for compact PCB layouts</td>
+<td>• Moderate long-term drift compared to metal-foil precision resistors<br>• Limited power dissipation due to small 0603 package<br>• Accuracy can be affected by PCB thermal gradients if placed near heat sources</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale</strong></p>
+<p><strong>Barrel Jack</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>PJ-102A barrel jack</strong><br>$0.80/each<br><a href="link">link to product</a></td>
+<td>• Very common connector footprint<br>• Through-hole mounting provides strong mechanical stability<br>• Suitable for moderate current DC input</td>
+<td>• Larger footprint than smaller connectors<br>• Not sealed against moisture or debris<br>• Limited retention strength compared to locking connectors</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>PJ-037A barrel jack</strong><br>$1.00/each<br><a href="link">link to product</a></td>
+<td>• Compact form factor<br>• Good mechanical anchoring for PCB mounting<br>• Widely available from multiple vendors</td>
+<td>• Slightly lower current rating<br>• Reduced robustness under repeated insertion cycles<br>• Requires enclosure support</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>CUI PJ-002A barrel jack</strong><br>$1.20/each<br><a href="link">link to product</a></td>
+<td>• Reliable manufacturer support and documentation<br>• Strong PCB retention due to through-hole mounting<br>• Compatible with standard 5.5 mm / 2.1 mm plugs</td>
+<td>• Larger PCB area required<br>• No built-in locking mechanism<br>• Exposed contacts can collect dust/moisture</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale</strong></p>
+<p><strong>8-Pin Connector</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>JST XH B8B-XH-A connector</strong><br>$0.40/each<br><a href="link">link to product</a></td>
+<td>• Locking friction ramp improves retention<br>• Widely available and easy to assemble<br>• Good for low-cost sensor harnesses</td>
+<td>• Larger PCB footprint<br>• Not sealed for outdoor environments<br>• Limited current rating per pin</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>61300811121 right-angle header</strong><br>$0.60/each<br><a href="link">link to product</a></td>
+<td>• Simple, robust, easy to source<br>• Compatible with standard jumper wires<br>• Low vertical height in enclosures</td>
+<td>• No locking mechanism<br>• Not suitable for vibration environments<br>• Exposed pins susceptible to corrosion</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image" data-desc-position="bottom"><img alt="" src="image"></a><br><strong>JST GH BM08B-GHS-TBT connector</strong><br>$0.80/each<br><a href="link">link to product</a></td>
+<td>• Compact footprint saves PCB space<br>• Positive latch improves vibration resistance<br>• Good for production harnesses</td>
+<td>• Requires specialized crimp tools<br>• Harder to hand-solder due to fine pitch<br>• Not sealed without additional protection</td>
+</tr>
+</tbody>
+</table>
 
 
 
