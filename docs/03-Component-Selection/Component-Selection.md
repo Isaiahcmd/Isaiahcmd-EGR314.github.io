@@ -58,6 +58,44 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 **Voltage Reference IC**
 
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![](image)<br>**ADR4525 precision reference**<br>$3.50/each<br>[link to product](link) | • Very low temperature drift for stable ADC measurements<br>• High initial accuracy supports consistent calibration<br>• Low noise improves precision readings | • Higher cost than basic references<br>• Requires careful PCB layout and decoupling<br>• Fixed output voltage |
+| ![](image)<br>**TL431A adjustable reference**<br>$0.20/each<br>[link to product](link) | • Very inexpensive and widely available<br>• Adjustable output using external resistors<br>• Useful as reference or regulator | • Higher noise and drift<br>• Requires bias current to operate<br>• Accuracy depends on external components |
+| ![](image)<br>**REF3325 precision reference**<br>$1.60/each<br>[link to product](link) | • Low quiescent current ideal for battery systems<br>• Good accuracy and low drift<br>• Compatible with many ADC ranges | • Not as low-drift as premium references<br>• Limited output current capability<br>• Requires clean layout for best performance |
+
+**Rationale:** A clock oscillator is easier ....
+
+**Hot-Swap I<sup>2</sup>C Buffer**
+
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![](image)<br>**TCA4311A I²C buffer**<br>$1.40/each<br>[link to product](link) | • Enables live insertion/removal of I²C devices<br>• Built-in rise-time accelerator improves signal integrity<br>• Minimal external components required | • Adds small propagation delay<br>• Must be placed near connector boundary<br>• Signal-level protection only |
+| ![](image)<br>**PCA9511A I²C buffer**<br>$1.20/each<br>[link to product](link) | • Industry-standard hot-swap solution<br>• Protects bus during hot-plug events<br>• Supports standard and fast I²C modes | • Increases bus capacitance slightly<br>• Limited diagnostics<br>• Requires proper pull-up sizing |
+| ![](image)<br>**LTC4300A I²C buffer**<br>$2.00/each<br>[link to product](link) | • Bus pre-charge minimizes insertion glitches<br>• Good for industrial environments<br>• Helps isolate faulty downstream devices | • Slightly higher cost<br>• Requires careful layout<br>• Additional design considerations for segmentation |
+
+**Rationale:** A clock oscillator is easier ....
+
+**Power Regulator**
+
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![](image)<br>**XL1509-3.3 buck regulator**<br>$1/each<br>[link to product](link) | • Simple fixed 3.3 V design<br>• Handles high input voltages<br>• Low cost | • Lower switching frequency requires larger passives<br>• Higher ripple/EMI<br>• Lower efficiency at light loads |
+| ![](image)<br>**TPS62172 synchronous buck**<br>$3/each<br>[link to product](link) | • High efficiency across load range<br>• Smaller external components<br>• Cleaner output rail | • Higher cost<br>• Requires careful layout<br>• Narrower input range |
+| ![](image)<br>**MP1584EN buck regulator**<br>$1.50/each<br>[link to product](link) | • Good performance for cost<br>• Smaller magnetics than older regulators<br>• Widely used design option | • EMI depends heavily on layout<br>• Variant documentation differences<br>• Not ultra-low-noise |
+
+
+**Rationale:** A clock oscillator is easier ....
+
+**MOSFET Options**
+
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![](image)<br>**AO3407A P-MOSFET**<br>$0.30/each<br>[link to product](link) | • Low Rds(on) for efficient switching<br>• Compact SOT-23 package<br>• Common high-side switching device | • Limited current handling<br>• Thermal limits of small package<br>• Gate-drive margin must be verified |
+| ![](image)<br>**SI2301CDS P-MOSFET**<br>$0.40/each<br>[link to product](link) | • Good balance of cost and performance<br>• Widely available<br>• Suitable for 3.3 V and 5 V switching | • Slightly higher Rds(on)<br>• Limited dissipation capability<br>• Requires gate resistor design |
+| ![](image)<br>**DMG2305UX P-MOSFET**<br>$0.50/each<br>[link to product](link) | • Very low on-resistance<br>• Compact package<br>• Good for moderate current switching | • Thermal limitations<br>• Gate-threshold must be checked<br>• Slightly higher cost |
+
+**Rationale:** A clock oscillator is easier ....
 
 
 
@@ -66,36 +104,3 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 
 
-
-
-**Hot-Swap I**
-
-
-
-
-
-
-
-
-
-
-**Op-Amp**
-
-
-
-
-
-
-
-
-
-**Op-Amp**
-
-
-
-
-
-
-
-
-**Op-Amp**
