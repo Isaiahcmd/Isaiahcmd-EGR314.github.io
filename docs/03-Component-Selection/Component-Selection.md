@@ -4,32 +4,8 @@ title: Module's Selected Major Components
 
 ## Module's Selected Major Components
 
-The following sections are the selected major components necessary for sensing soil temperature, relative humidity, communicatiing with the whole of the CropScout systems, and regulating power from the system power rail.
+The following sections compare the major components required for sensing soil temperature and relative humidity, communicating with the CropScout system, and regulating power from the system power rail. To minimize total system cost while maintaining adequate sensing accuracy and operational reliability, the design selects the PT1000 temperature probe, HDC2080 humidity sensor, MCP6001 op-amp, REF3325 voltage reference, PCA9511A I²C hot-swap buffer, XL1509-3.3 switching regulator, DMG2305UX P-channel MOSFET, RC0603BR-0710KL precision resistor, CUI PJ-002A barrel jack, and 61300811121 8-pin header, providing an effective overall cost-to-performance balance for the CropScout sensing module.
 
-
-### Power Regulator
-
-
-
-### Tempurature Sensor
-
-
-
-### Humidity Sensor
-
-### Op-Amp
-
-### Voltage Reference IC
-
-### Hot-Swap I<sup>2</sup>C Buffer
-
-### MOSFET
-
-### Precision Resistor
-
-### Barrel Jack
-
-### 8-Pin Connector
 
 -----------
 
@@ -48,8 +24,8 @@ The following sections are the selected major components necessary for sensing s
 
 | **Component** | **Pros** | **Cons** |
 |---|---|---|
-| ![image](OPA333.png)<br>**OPA333 precision op-amp**<br>$2.82/each<br>[link](https://www.digikey.com/en/products/detail/texas-instruments/OPA333AIDBVT/1004627)) | • Very low input offset voltage ideal for precision RTD current sources<br>• Zero-drift architecture provides excellent long-term stability<br>• Rail-to-rail input/output operation suitable for low-voltage systems | • Higher cost than general purpose op-amps<br>• Limited bandwidth compared to high-speed amplifiers<br>• Slightly higher quiescent current than ultra low power options |
-| ![image](MCP6002.png)<br>**MCP6001 general-purpose op-amp**<br>$0.40/each<br>[link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6001T-E-OT/1979833?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gbraid=0AAAAADrbLlhNtrIkwPp0OiJmv8l7g3KB3&gclid=CjwKCAiAkbbMBhB2EiwANbxtbXV5fqL9M9kqF_H6gamELeyg9kteB0eufRAYaOHZXDlToHE7oz6ajRoCPDAQAvD_BwE)) | • Lowest cost<br>• Rail-to-rail operation works well in 3.3 V systems<br>• Low power consumption suitable for battery-powered nodes | • Higher offset voltage reduces precision for RTD circuits<br>• Lower accuracy over temperature compared to precision op-amps<br>• Moderate noise performance for sensitive measurement circuits |
+| ![image](OPA333.png)<br>**OPA333 precision op-amp**<br>$2.82/each<br>[link](https://www.digikey.com/en/products/detail/texas-instruments/OPA333AIDBVT/1004627) | • Very low input offset voltage ideal for precision RTD current sources<br>• Zero-drift architecture provides excellent long-term stability<br>• Rail-to-rail input/output operation suitable for low-voltage systems | • Higher cost than general purpose op-amps<br>• Limited bandwidth compared to high-speed amplifiers<br>• Slightly higher quiescent current than ultra low power options |
+| ![image](MCP6002.png)<br>**MCP6001 general-purpose op-amp**<br>$0.40/each<br>[link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6001T-E-OT/1979833?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gbraid=0AAAAADrbLlhNtrIkwPp0OiJmv8l7g3KB3&gclid=CjwKCAiAkbbMBhB2EiwANbxtbXV5fqL9M9kqF_H6gamELeyg9kteB0eufRAYaOHZXDlToHE7oz6ajRoCPDAQAvD_BwE) | • Lowest cost<br>• Rail-to-rail operation works well in 3.3 V systems<br>• Low power consumption suitable for battery-powered nodes | • Higher offset voltage reduces precision for RTD circuits<br>• Lower accuracy over temperature compared to precision op-amps<br>• Moderate noise performance for sensitive measurement circuits |
 | ![image](LT6015.png)<br>**LT6015 precision op-amp**<br>$2.50/each<br>[link](https://www.digikey.com/en/products/detail/analog-devices-inc/LT6015HS5-TRPBF/8040793) | • Very low offset voltage and drift suitable for precision current generation<br>• Excellent noise performance for accurate sensor measurements<br>• Good temperature stability across wide ranges | • Higher cost than low-power devices<br>• Slightly higher power consumption<br>• May be unnecessary for moderate-accuracy environmental sensing |
 
 **Rationale:** The MCP6001 is selected for its low cost while still providing rail-to-rail operation and low power consumption. Although it has higher offset voltage than precision amplifiers, the overall system measurement accuracy is primarily determined by the PT1000 sensor and precision reference resistor.
