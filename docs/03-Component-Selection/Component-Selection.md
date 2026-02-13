@@ -28,7 +28,7 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 -----------
 
-**Moisture Sensor**
+**Humidity Sensor**
 
 | **Component** | **Pros** | **Cons** |
 |---|---|---|
@@ -43,9 +43,9 @@ For more details, review the ["Appendix - Component Selection Process - Actuator
 
 | **Component** | **Pros** | **Cons** |
 |---|---|---|
-| ![](image)<br>**OPA333 precision op-amp**<br>$1.50/each<br>[link to product](link) | • Very low input offset voltage ideal for precision RTD current sources<br>• Zero-drift architecture provides excellent long-term stability<br>• Rail-to-rail input/output operation suitable for low-voltage systems | • Higher cost than general-purpose op-amps<br>• Limited bandwidth compared to high-speed amplifiers<br>• Slightly higher quiescent current than ultra-low-power options |
-| ![](image)<br>**MCP6001 general-purpose op-amp**<br>$0.40/each<br>[link to product](link) | • Very low cost and widely available<br>• Rail-to-rail operation works well in 3.3 V systems<br>• Low power consumption suitable for battery-powered nodes | • Higher offset voltage reduces precision for RTD circuits<br>• Lower accuracy over temperature compared to precision op-amps<br>• Moderate noise performance for sensitive measurement circuits |
-| ![](image)<br>**LT6015 precision op-amp**<br>$2.50/each<br>[link to product](link) | • Very low offset voltage and drift suitable for precision current generation<br>• Excellent noise performance for accurate sensor measurements<br>• Good temperature stability across wide ranges | • Higher cost than low-power devices<br>• Slightly higher power consumption<br>• May be unnecessary for moderate-accuracy environmental sensing |
+| ![](image)<br>**OPA333 precision op-amp**<br>$2.82/each<br>[link](https://www.digikey.com/en/products/detail/texas-instruments/OPA333AIDBVT/1004627)) | • Very low input offset voltage ideal for precision RTD current sources<br>• Zero-drift architecture provides excellent long-term stability<br>• Rail-to-rail input/output operation suitable for low-voltage systems | • Higher cost than general-purpose op-amps<br>• Limited bandwidth compared to high-speed amplifiers<br>• Slightly higher quiescent current than ultra-low-power options |
+| ![](image)<br>**MCP6001 general-purpose op-amp**<br>$0.40/each<br>[link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6001T-E-OT/1979833?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gbraid=0AAAAADrbLlhNtrIkwPp0OiJmv8l7g3KB3&gclid=CjwKCAiAkbbMBhB2EiwANbxtbXV5fqL9M9kqF_H6gamELeyg9kteB0eufRAYaOHZXDlToHE7oz6ajRoCPDAQAvD_BwE)) | • Very low cost and widely available<br>• Rail-to-rail operation works well in 3.3 V systems<br>• Low power consumption suitable for battery-powered nodes | • Higher offset voltage reduces precision for RTD circuits<br>• Lower accuracy over temperature compared to precision op-amps<br>• Moderate noise performance for sensitive measurement circuits |
+| ![](image)<br>**LT6015 precision op-amp**<br>$2.50/each<br>[link](https://www.digikey.com/en/products/detail/analog-devices-inc/LT6015HS5-TRPBF/8040793) | • Very low offset voltage and drift suitable for precision current generation<br>• Excellent noise performance for accurate sensor measurements<br>• Good temperature stability across wide ranges | • Higher cost than low-power devices<br>• Slightly higher power consumption<br>• May be unnecessary for moderate-accuracy environmental sensing |
 
 **Rationale:** A clock oscillator is easier ....
 
