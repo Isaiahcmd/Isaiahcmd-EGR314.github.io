@@ -1017,12 +1017,8 @@
   <h1>Module's Selected Major Components</h1>
 
 <h2 id="modules-selected-major-components">Module's Selected Major Components</h2>
-<p>The following sections are the selected major components necessary for  .....</p>
-<blockquote>
-<p><strong>For each of the following sections, use <ins>one of the two styles</ins> given near the end. <em>REMOVE THIS NOTE</em></strong></p>
-</blockquote>
+<p>The following sections are the selected major components necessary for sensing soil temperature, relative humidity, communicatiing with the whole of the CropScout systems, and regulating power from the system power rail.</p>
 <h3 id="power-regulator">Power Regulator</h3>
-<p>(<strong>remove this note/placeholder</strong>: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} <strong>THAT WERE SELECTED</strong>)</p>
 <h3 id="tempurature-sensor">Tempurature Sensor</h3>
 <h3 id="humidity-sensor">Humidity Sensor</h3>
 <h3 id="op-amp">Op-Amp</h3>
@@ -1045,22 +1041,22 @@
 <tbody>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../SHT45.png" data-desc-position="bottom"><img alt="image" src="../SHT45.png"></a><br><strong>SHT45-AD1B-R2A0/A1 humidity sensor</strong><br>$5.54/each<br><a href="https://www.digikey.com/en/products/detail/sensirion-ag/SHT45-AD1B-R2/16360969?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLlhvjO3S2T4wJVM4nKnQCtGe4&amp;gclid=CjwKCAiAkbbMBhB2EiwANbxtbR30zFlR6-ISnKVzKA9TfFOxo3CsswTxviwWlwFFxJSoi6N8-PF84hoCQ5cQAvD_BwE">link</a></td>
-<td>• High RH accuracy and long-term stability<br>• Digital I²C output simplifies PCB design (no analog conditioning)<br>• Low power operation suitable for embedded environmental nodes</td>
-<td>• Higher cost than lower-accuracy RH sensors<br>• Requires careful placement away from heat sources for accurate readings<br>• Needs environmental protection (filter or coating) to avoid contamination drift</td>
+<td>• High RH accuracy and long-term stability<br>• Digital I²C output simplifies PCB<br>• Low power operation</td>
+<td>• Highest cost<br>• Requires careful placement away from heat sources for accurate readings<br>• Needs environmental protection (filter or coating) to avoid contamination drift</td>
 </tr>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../SHT.png" data-desc-position="bottom"><img alt="image" src="../SHT.png"></a><br><strong>SHT41-AD1B humidity sensor</strong><br>$2.84/each<br><a href="https://www.digikey.com/en/products/detail/sensirion-ag/SHT41-AD1B-R3/15296599">link</a></td>
-<td>• Good accuracy-to-cost ratio<br>• I²C interface enables simple firmware integration<br>• Compact surface-mount package</td>
-<td>• Slightly lower performance compared to SHT45<br>• Sensitive to condensation/contamination without protection<br>• Placement airflow affects measurement accuracy</td>
+<td>• Good accuracy<br>• I²C interface enables simple firmware integration<br>• Smaller performance trade-off compared to SHT45</td>
+<td>• Worse long-term stability than SHT45<br>• Sensitive to condensation/contamination without protection<br>• More expensive than lower-accuracy humidity sensors</td>
 </tr>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../HDC.png" data-desc-position="bottom"><img alt="image" src="../HDC.png"></a><br><strong>HDC2080 humidity sensor</strong><br>$1.94/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/HDC2080DMBR/9860135?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLlhvjO3S2T4wJVM4nKnQCtGe4&amp;gclid=CjwKCAiAkbbMBhB2EiwANbxtbY5duiewVzGNgl5dhdKb6f7xtAyPZq1Vo0maRoVvSNwXd1f-4QeO-RoCcEMQAvD_BwE">link</a></td>
-<td>• High accuracy alternative supply chain to Sensirion parts<br>• I²C interface with simple integration<br>• Stable performance across wide environmental conditions</td>
-<td>• Requires careful layout and decoupling for best accuracy<br>• Placement must minimize self-heating effects<br>• Availability may vary depending on package/SKU</td>
+<td>• Lowest cost<br>• I²C interface with simple integration<br>• Stable performance across wide environmental conditions</td>
+<td>• Requires careful layout and decoupling for best accuracy<br>• Placement must minimize self-heating effects<br>• Lowest long term stability</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Rationale:</strong> The HDC2080 is selected for its low cost. The accuracy is good enough for the purposes of monitoring feild humidity.</p>
 <p><strong>Op-Amp</strong></p>
 <table>
 <thead>
@@ -1074,11 +1070,11 @@
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../OPA333.png" data-desc-position="bottom"><img alt="image" src="../OPA333.png"></a><br><strong>OPA333 precision op-amp</strong><br>$2.82/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/OPA333AIDBVT/1004627">link</a>)</td>
 <td>• Very low input offset voltage ideal for precision RTD current sources<br>• Zero-drift architecture provides excellent long-term stability<br>• Rail-to-rail input/output operation suitable for low-voltage systems</td>
-<td>• Higher cost than general-purpose op-amps<br>• Limited bandwidth compared to high-speed amplifiers<br>• Slightly higher quiescent current than ultra-low-power options</td>
+<td>• Higher cost than general purpose op-amps<br>• Limited bandwidth compared to high-speed amplifiers<br>• Slightly higher quiescent current than ultra low power options</td>
 </tr>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MCP6002.png" data-desc-position="bottom"><img alt="image" src="../MCP6002.png"></a><br><strong>MCP6001 general-purpose op-amp</strong><br>$0.40/each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6001T-E-OT/1979833?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=20228387720&amp;gbraid=0AAAAADrbLlhNtrIkwPp0OiJmv8l7g3KB3&amp;gclid=CjwKCAiAkbbMBhB2EiwANbxtbXV5fqL9M9kqF_H6gamELeyg9kteB0eufRAYaOHZXDlToHE7oz6ajRoCPDAQAvD_BwE">link</a>)</td>
-<td>• Very low cost and widely available<br>• Rail-to-rail operation works well in 3.3 V systems<br>• Low power consumption suitable for battery-powered nodes</td>
+<td>• Lowest cost<br>• Rail-to-rail operation works well in 3.3 V systems<br>• Low power consumption suitable for battery-powered nodes</td>
 <td>• Higher offset voltage reduces precision for RTD circuits<br>• Lower accuracy over temperature compared to precision op-amps<br>• Moderate noise performance for sensitive measurement circuits</td>
 </tr>
 <tr>
@@ -1088,7 +1084,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Rationale:</strong> The MCP6001 is selected for its low cost while still providing rail-to-rail operation and low power consumption. Although it has higher offset voltage than precision amplifiers, the overall system measurement accuracy is primarily determined by the PT1000 sensor and precision reference resistor.</p>
 <p><strong>Voltage Reference IC</strong></p>
 <table>
 <thead>
@@ -1116,7 +1112,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Rationale:</strong> The REF3325 was selected for its balance between precision performance and cost.</p>
 <p><strong>Hot-Swap I<sup>2</sup>C Buffer</strong></p>
 <table>
 <thead>
@@ -1144,7 +1140,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Rationale:</strong> The PCA9511A was selected because it provides reliable hot-swap I²C protection at a low cost and maintains strong stong downstream bus isolation.</p>
 <p><strong>Power Regulator</strong></p>
 <table>
 <thead>
@@ -1172,7 +1168,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Rationale:</strong> The XL1509-3.3 was selected because it provides the required fixed 3.3 V rail at the lowest cost while supporting a wide input-voltage range.</p>
 <p><strong>MOSFET</strong></p>
 <table>
 <thead>
@@ -1200,7 +1196,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> A clock oscillator is easier ....</p>
+<p><strong>Rationale:</strong> The DMG2305UX was selected because it provides the required P-channel high-side switching functionality at the lowest cost while still offering low on-resistance in a compact surface-mount package.</p>
 <p><strong>Temperature Sensor</strong></p>
 <table>
 <thead>
@@ -1228,7 +1224,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale</strong></p>
+<p><strong>Rationale</strong> The PT1000 temperature probe was selected because it provides the best accuracy, repeatability, and long-term stability for soil temperature measurement. Its constant resistance will make it easy to calibrate and it is robust enough to be inserted into soil.</p>
 <p><strong>Precision Resistor</strong></p>
 <table>
 <thead>
@@ -1256,7 +1252,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale</strong></p>
+<p><strong>Rationale</strong> he RC0603BR-0710KL thin-film resistor was selected because it provides the required 0.1% precision and adequate temperature stability while maintaining the lowest cost.</p>
 <p><strong>Barrel Jack</strong></p>
 <table>
 <thead>
@@ -1284,7 +1280,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale</strong></p>
+<p><strong>Rationale</strong> The CUI PJ-002A barrel jack was selected because Of its low cost.</p>
 <p><strong>8-Pin Connector</strong></p>
 <table>
 <thead>
@@ -1312,6 +1308,7 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Rationale</strong> The 61300811121 right-angle header was selected because it offers the simplest and most cost-effective 8-pin interconnect option while remaining easy to assemble and test.</p>
 
 
 
