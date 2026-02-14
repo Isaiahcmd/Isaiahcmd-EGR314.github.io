@@ -45,3 +45,31 @@ In addition to sending measurement data, the Temperature/Humidity subsystem rece
 Compatibility between the sensing components and the selected PIC18F47Q10 microcontroller was verified through review of the PIC18F47Q10 device datasheet, which confirms support for ADC and I²C peripherals, and through manufacturer-provided HDC2080 sensor documentation and example I²C driver implementations demonstrating standard microcontroller interfacing.
 
 **MPLAB Configuration**
+
+The required peripherals for the sensing subsystem were configured using MPLAB Code Configurator. 
+The ADC module was assigned to read the PT1000 temperature signal using an external precision reference, the MSSP module was configured for I²C communication with the HDC2080 humidity sensor, and the EUSART module was configured for serial communication with the system communication subsystem. 
+Pin assignments were completed using the MCC Pin Manager to ensure correct peripheral routing.
+
+![image](PINOUT.png)
+
+*MCC pinout*
+
+
+![image](PROJPROP.png)
+
+*MCC project properties*
+
+
+![image](I2C.png)
+
+*MCC I<sup>2</sup>C*
+
+
+![image](ADC.png)
+
+*MCC ADC*
+
+
+![image](UART.png)
+
+*MCC UART*
