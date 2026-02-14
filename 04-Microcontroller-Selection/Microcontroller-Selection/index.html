@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#microcontroller" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -640,6 +645,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Microcontroller Selection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -649,6 +665,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-microcontroller-peripherals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Microcontroller Peripherals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pic18f47q10-ipt-peripheral-capability-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIC18F47Q10-I/PT Peripheral Capability Comparison
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -874,6 +934,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-microcontroller-peripherals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Microcontroller Peripherals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pic18f47q10-ipt-peripheral-capability-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIC18F47Q10-I/PT Peripheral Capability Comparison
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -897,6 +992,112 @@
 
   <h1>Microcontroller Selection</h1>
 
+<h2 id="microcontroller">Microcontroller</h2>
+<p>The selected microcontroller for the sensing module is the PIC18F47Q10. 
+The device provides multiple MSSP modules supporting I²C communication, allowing connection to the HDC2080 humidity sensor through the PCA9511A buffer. 
+The integrated 12-bit ADC provides sufficient analog inputs for reading the PT1000 temperature probe signal conditioned by the MCP6001 amplifier and referenced by the REF3325 voltage reference. 
+The microcontroller also provides multiple UART modules for inter-board communication through the 8-pin system connector. 
+With over 30 GPIO pins available, the device exceeds the pin requirements for the sensing subsystem and allows future expansion.</p>
+<p>The Temperature/Humidity subsystem is responsible for measuring soil temperature and ambient relative humidity and providing this environmental data to the rest of the CropScout system. 
+Temperature measurements are obtained using the PT1000 soil probe, while ambient humidity is measured using the HDC2080 digital humidity sensor. 
+The processed sensor data is transmitted to the communication subsystem through the system interface connector, where it is forwarded to the display subsystem for user visualization. 
+In addition to sending measurement data, the Temperature/Humidity subsystem receives configuration inputs originating from the display subsystem, allowing the user to select temperature units (°C or °F) and configure threshold-based alert settings.</p>
+<p><strong>Microcontroller Requirements</strong></p>
+<h2 id="required-microcontroller-peripherals">Required Microcontroller Peripherals</h2>
+<table>
+<thead>
+<tr>
+<th>Peripheral</th>
+<th>Quantity Required</th>
+<th>Component Using It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADC</td>
+<td>1 channel</td>
+<td>PT1000 temperature probe (via MCP6001)</td>
+</tr>
+<tr>
+<td>I²C</td>
+<td>1 bus</td>
+<td>HDC2080 humidity sensor, PCA9511A I²C buffer</td>
+</tr>
+<tr>
+<td>UART (system communication)</td>
+<td>1</td>
+<td>CropScout system connector</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>3–6 pins</td>
+<td>Control / interface signals</td>
+</tr>
+<tr>
+<td>Interrupt (optional)</td>
+<td>1</td>
+<td>HDC2080 alert pin (optional)</td>
+</tr>
+<tr>
+<td>Power / Ground pins</td>
+<td>8 pins (4 VDD, 4 VSS)</td>
+<td>Microcontroller power connections</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PIC18F47Q10</strong></p>
+<h2 id="pic18f47q10-ipt-peripheral-capability-comparison">PIC18F47Q10-I/PT Peripheral Capability Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Peripheral</th>
+<th>Required</th>
+<th>Available on PIC18F47Q10</th>
+<th>Meets Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADC channels</td>
+<td>1</td>
+<td>35 channels</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>I²C interfaces</td>
+<td>1</td>
+<td>2 MSSP modules</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>UART interfaces</td>
+<td>1</td>
+<td>2 UART modules</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>GPIO pins</td>
+<td>3–6</td>
+<td>36 GPIO pins</td>
+<td>Exceeds</td>
+</tr>
+<tr>
+<td>Interrupt inputs</td>
+<td>1 (optional)</td>
+<td>Multiple external interrupts</td>
+<td>Meets</td>
+</tr>
+<tr>
+<td>Power / Ground pins</td>
+<td>8 pins (4 VDD, 4 VSS)</td>
+<td>8 pins (4 VDD, 4 VSS)</td>
+<td>Meets</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compatability</strong></p>
+<p>Compatibility between the sensing components and the selected PIC18F47Q10 microcontroller was verified through review of the PIC18F47Q10 device datasheet, which confirms support for ADC and I²C peripherals, and through manufacturer-provided HDC2080 sensor documentation and example I²C driver implementations demonstrating standard microcontroller interfacing.</p>
+<p><strong>MPLAB Configuration</strong></p>
 
 
 
@@ -904,6 +1105,8 @@
 
 
 
+  
+  
 
 
 
