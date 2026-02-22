@@ -22,4 +22,4 @@ The ICSP interface provides in-circuit programming capability through the Microc
 
 ## Block Diagram 
 
-![Temperature / Humidity Module ](TempHumModual.drawio.png)
+![Temperature / Humidity Module ](TempHumModual1.png)
