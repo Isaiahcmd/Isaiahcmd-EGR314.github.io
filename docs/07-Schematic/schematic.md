@@ -16,7 +16,7 @@ Temperature is measured using a PT1000 resistance temperature detector (RTD). Th
 
 
 ![schematic](TemHumPic.png){style width:"350" height:"300;"}
-**Figure ##:** Showing a example schematic.
+**Figure 1:** Temperature/Humidity Subsystem schematic.
 
 
 ## Resouces
