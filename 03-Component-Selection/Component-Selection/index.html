@@ -1175,34 +1175,6 @@
 </tbody>
 </table>
 <p><strong>Rationale:</strong> The REF3325 was selected for its balance between precision performance and cost.</p>
-<p><strong>Hot-Swap I<sup>2</sup>C Buffer</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Component</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../TCA4.png" data-desc-position="bottom"><img alt="image" src="../TCA4.png"></a><br><strong>TCA4311A I²C buffer</strong><br>$3.08/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/TCA4311ADR/2816461">link</a></td>
-<td>• Enables live insertion/removal of I²C devices<br>• Built-in rise-time accelerator improves signal integrity<br>• Minimal external components required</td>
-<td>• Adds small propagation delay<br>• Must be placed near connector boundary<br>• Signal-level protection only</td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../PCA.png" data-desc-position="bottom"><img alt="image" src="../PCA.png"></a><br><strong>PCA9511A I²C buffer</strong><br>$2.72/each<br><a href="https://www.digikey.com/en/products/detail/nxp-usa-inc/PCA9511AD,118/7649058">link</a></td>
-<td>• Industry-standard hot-swap solution<br>• Protects bus during hot-plug events<br>• Supports standard and fast I²C modes</td>
-<td>• Increases bus capacitance slightly<br>• Limited diagnostics<br>• Requires proper pull-up sizing</td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../LTC.png" data-desc-position="bottom"><img alt="image" src="../LTC.png"></a><br><strong>LTC4300A I²C buffer</strong><br>$7.20/each<br><a href="https://www.digikey.com/en/products/detail/analog-devices-inc/LTC4300A-1IMS8-PBF/961339">link</a></td>
-<td>• Bus pre-charge minimizes insertion glitches<br>• Good for industrial environments<br>• Helps isolate faulty downstream devices</td>
-<td>• Slightly higher cost<br>• Requires careful layout<br>• Additional design considerations for segmentation</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Rationale:</strong> The PCA9511A was selected because it provides reliable hot-swap I²C protection at a low cost and maintains strong stong downstream bus isolation.</p>
 <p><strong>Power Regulator</strong></p>
 <table>
 <thead>
