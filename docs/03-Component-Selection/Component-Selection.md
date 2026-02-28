@@ -40,16 +40,6 @@ The following sections compare the major components required for sensing soil te
 
 **Rationale:** The REF3325 was selected for its balance between precision performance and cost.
 
-**Hot-Swap I<sup>2</sup>C Buffer**
-
-| **Component** | **Pros** | **Cons** |
-|---|---|---|
-| ![image](TCA4.png)<br>**TCA4311A I²C buffer**<br>$3.08/each<br>[link](https://www.digikey.com/en/products/detail/texas-instruments/TCA4311ADR/2816461) | • Enables live insertion/removal of I²C devices<br>• Built-in rise-time accelerator improves signal integrity<br>• Minimal external components required | • Adds small propagation delay<br>• Must be placed near connector boundary<br>• Signal-level protection only |
-| ![image](PCA.png)<br>**PCA9511A I²C buffer**<br>$2.72/each<br>[link](https://www.digikey.com/en/products/detail/nxp-usa-inc/PCA9511AD,118/7649058) | • Industry-standard hot-swap solution<br>• Protects bus during hot-plug events<br>• Supports standard and fast I²C modes | • Increases bus capacitance slightly<br>• Limited diagnostics<br>• Requires proper pull-up sizing |
-| ![image](LTC.png)<br>**LTC4300A I²C buffer**<br>$7.20/each<br>[link](https://www.digikey.com/en/products/detail/analog-devices-inc/LTC4300A-1IMS8-PBF/961339) | • Bus pre-charge minimizes insertion glitches<br>• Good for industrial environments<br>• Helps isolate faulty downstream devices | • Slightly higher cost<br>• Requires careful layout<br>• Additional design considerations for segmentation |
-
-**Rationale:** The PCA9511A was selected because it provides reliable hot-swap I²C protection at a low cost and maintains strong stong downstream bus isolation.
-
 **Power Regulator**
 
 | **Component** | **Pros** | **Cons** |
