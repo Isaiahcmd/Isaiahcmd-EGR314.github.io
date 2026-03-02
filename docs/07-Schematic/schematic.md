@@ -10,7 +10,7 @@ The combined 9V rail (system rail) is passed through to the downstream board in 
 
 The 3.3V rail powers the ESP32 microcontroller and all onboard sensors.
 
-The humidity sensor (HDC2080) communicates with the ESP32 over the I²C bus. An I²C hot-swap buffer (PCA9511A) isolates the local I²C bus from the system bus, allowing the board to be safely connected or disconnected without disturbing the rest of the system.
+The humidity sensor (HDC2080) communicates with the ESP32 over the I²C bus. 
 
 Temperature is measured using a PT1000 resistance temperature detector (RTD). The RTD is driven from a precision 2.5V voltage reference to improve measurement stability and accuracy. The RTD forms a voltage divider with a precision resistor. The resulting voltage is buffered and measured by the ESP32’s ADC to determine the probe’s resistance and corresponding temperature.
 
