@@ -1186,9 +1186,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../XL.png" data-desc-position="bottom"><img alt="image" src="../XL.png"></a><br><strong>XL1509-3.3 buck regulator</strong><br>$0.61/each<br><a href="https://www.digikey.com/en/products/detail/umw/XL1509-3.3/24889882?gclsrc=aw.ds&amp;gad_source=4&amp;gad_campaignid=21136823955&amp;gbraid=0AAAAADrbLlghOQE-IwtSJAmaimMc3CB8-&amp;gclid=CjwKCAiAkbbMBhB2EiwANbxtbUOFY1vp_WfZm_yfzUVH2KgDYfhga_t4X1uMC_d3urPPxXmPd3xWThoCNoUQAvD_BwE">link</a></td>
-<td>• Simple fixed 3.3 V design<br>• Handles high input voltages<br>• Low cost</td>
-<td>• Lower switching frequency requires larger passives<br>• Higher ripple/EMI<br>• Lower efficiency at light loads</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../XL.png" data-desc-position="bottom"><img alt="image" src="../XL.png"></a><br><strong>LM2675MX-3.3/NOPB Buck Regulator</strong><br>$4.80/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2675MX-3-3-NOPB/366907">link</a></td>
+<td>• Simple fixed 3.3 V design<br>• Reliable switching regulator with well-documented reference designs<br>• Wide input voltage range supports the 9 V system rail</td>
+<td>• Larger external components compared to modern high-frequency regulators<br>•Switching noise requires careful PCB layout and filtering<br>• Highest cost</td>
 </tr>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../TPS.png" data-desc-position="bottom"><img alt="image" src="../TPS.png"></a><br><strong>TPS62172 synchronous buck</strong><br>$1.67/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/TPS62172DSGT/2781002">link</a></td>
@@ -1202,35 +1202,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> The XL1509-3.3 was selected because it provides the required fixed 3.3 V rail at the lowest cost while supporting a wide input-voltage range.</p>
-<p><strong>MOSFET</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Component</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../AO34.png" data-desc-position="bottom"><img alt="image" src="../AO34.png"></a><br><strong>AO3407A P-MOSFET</strong><br>$0.46/each<br><a href="https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO3407A/1855778">link</a></td>
-<td>• Low Rds(on) for efficient switching<br>• Compact SOT-23 package<br>• Common high-side switching device</td>
-<td>• Limited current handling<br>• Thermal limits of small package<br>• Gate-drive margin must be verified</td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../SI2.png" data-desc-position="bottom"><img alt="image" src="../SI2.png"></a><br><strong>SI2301CDS P-MOSFET</strong><br>$0.71/each<br><a href="https://www.digikey.com/en/products/detail/vishay-siliconix/SI2301CDS-T1-E3/2622018">link</a></td>
-<td>• Good balance of cost and performance<br>• Widely available<br>• Suitable for 3.3 V and 5 V switching</td>
-<td>• Slightly higher Rds(on)<br>• Limited dissipation capability<br>• Requires gate resistor design</td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../DMG.png" data-desc-position="bottom"><img alt="image" src="../DMG.png"></a><br><strong>DMG2305UX P-MOSFET</strong><br>$0.30/each<br><a href="https://www.digikey.com/en/products/detail/diodes-incorporated/DMG2305UX-13/4251560?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=120565755&amp;gbraid=0AAAAADrbLljXIHCKJ57NJE_aqn3jKNSxh&amp;gclid=CjwKCAiAkbbMBhB2EiwANbxtbXC-tmLpWw26TxszAiIrTx22b1P-vNTs2F-fxqSELN_cH8ikjKX3dxoCvEUQAvD_BwE">link</a></td>
-<td>• Very low on-resistance<br>• Compact package<br>• Good for moderate current switching</td>
-<td>• Thermal limitations<br>• Gate-threshold must be checked<br>• Slightly higher cost</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Rationale:</strong> The DMG2305UX was selected because it provides the required P-channel high-side switching functionality at the lowest cost while still offering low on-resistance in a compact surface-mount package.</p>
+<p><strong>Rationale:</strong> The LM2675MX-3.3/NOPB was selected because it provides the required fixed 3.3 V rail and supports a wide input-voltage range, while having very good documentation.</p>
 <p><strong>Temperature Sensor</strong></p>
 <table>
 <thead>
@@ -1298,7 +1270,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../102A.png" data-desc-position="bottom"><img alt="image" src="../102A.png"></a><br><strong>PJ-102A barrel jack</strong><br>$0.59/each<br><a href="https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-102A/275425?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=120565755&amp;gbraid=0AAAAADrbLljXIHCKJ57NJE_aqn3jKNSxh&amp;gclid=CjwKCAiAkbbMBhB2EiwANbxtbQ4bqXD_DcC_vtQ_a9KpprJgPE6ocemjFjgkedDVRx50j8IXPc3cxxoC0EYQAvD_BwE">link</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../102A.png" data-desc-position="bottom"><img alt="image" src="../102A.png"></a><br><strong>PJ-102A barrel jack</strong><br>$0.59/each<br><a href="https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-102AH/408448?s=N4IgTCBcDaIAoCkC0BGADGAggCRAXQF8g">link</a></td>
 <td>• Very common connector footprint<br>• Through-hole mounting provides strong mechanical stability<br>• Suitable for moderate current DC input</td>
 <td>• Larger footprint than smaller connectors<br>• Not sealed against moisture or debris<br>• Limited retention strength compared to locking connectors</td>
 </tr>
@@ -1314,7 +1286,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale</strong> The CUI PJ-002A barrel jack was selected because Of its low cost.</p>
+<p><strong>Rationale</strong> The CUI PJ-102A barrel jack was selected because of its common footprint and mechanical stability.</p>
 <p><strong>8-Pin Connector</strong></p>
 <table>
 <thead>
