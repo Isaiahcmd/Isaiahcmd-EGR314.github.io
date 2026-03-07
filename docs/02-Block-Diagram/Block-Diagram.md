@@ -20,4 +20,4 @@ The ESP32-S3 processes both analog and digital sensor data and communicates meas
 
 ## Block Diagram 
 
-![Temperature / Humidity Module ](TempHumModual1.png)
+![Temperature / Humidity Module ](TempHumModualV2.png)
