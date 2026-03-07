@@ -1150,7 +1150,32 @@
 <p><strong>Rationale:</strong> The MCP6001 is selected for its low cost while still providing rail-to-rail operation and low power consumption.</p>
 <hr>
 <p><strong>Voltage Reference IC</strong></p>
-<p><em>(unchanged — matches BOM)</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../ADR.png" data-desc-position="bottom"><img alt="image" src="../ADR.png"></a><br><strong>ADR4525 precision reference</strong><br>$10.55/each<br><a href="https://www.digikey.com/en/products/detail/analog-devices-inc/ADR4525BRZ-R7/4141690">link</a></td>
+<td>• Very low temperature drift for stable ADC measurements<br>• High initial accuracy supports consistent calibration<br>• Low noise improves precision readings</td>
+<td>• Higher cost than basic references<br>• Requires careful PCB layout and decoupling<br>• Fixed output voltage</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../TL4.png" data-desc-position="bottom"><img alt="image" src="../TL4.png"></a><br><strong>TL431A adjustable reference</strong><br>$0.10/each<br><a href="https://www.digikey.com/en/products/detail/evvo/TL431A/21406979">link</a></td>
+<td>• Very inexpensive and widely available<br>• Adjustable output using external resistors<br>• Useful as reference or regulator</td>
+<td>• Higher noise and drift<br>• Requires bias current to operate<br>• Accuracy depends on external components</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../REF.png" data-desc-position="bottom"><img alt="image" src="../REF.png"></a><br><strong>REF3325 precision reference</strong><br>$2.18/each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/REF3325AIRSER/5034447">link</a></td>
+<td>• Low quiescent current ideal for battery systems<br>• Good accuracy and low drift<br>• Compatible with many ADC ranges</td>
+<td>• Not as low-drift as premium references<br>• Limited output current capability<br>• Requires clean layout for best performance</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Rationale:</strong> The REF3325 was selected for its balance between precision performance and cost.</p>
 <hr>
 <p><strong>Power Regulator</strong></p>
@@ -1183,7 +1208,32 @@
 <p><strong>Rationale:</strong> The LM2675MX-3.3/NOPB was selected because it provides a reliable fixed 3.3 V rail capable of supplying the ESP32-S3 and supporting circuitry while maintaining stable performance across a wide input-voltage range.</p>
 <hr>
 <p><strong>Temperature Sensor</strong></p>
-<p><em>(unchanged — matches BOM)</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../PT1000.png" data-desc-position="bottom"><img alt="image" src="../PT1000.png"></a><br><strong>PT1000 Temperature Sensor Probe (1597-314010819-ND)</strong><br>$9.90/each<br><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314010819/22109375">link</a></td>
+<td>• Very high accuracy and long-term stability<br>• Excellent repeatability<br>• Wide temperature range (−200°C to 600°C)<br>• Easy calibration</td>
+<td>• Requires precision current source<br>• More expensive than thermistors or digital sensors<br>• Wiring resistance must be compensated</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../DIGTHERMO.png" data-desc-position="bottom"><img alt="image" src="../DIGTHERMO.png"></a><br><strong>Digital Temperature Probe (SNS-TMP-DS18B20-MAXIM)</strong><br>$5.33/each<br><a href="https://www.digikey.com/en/products/detail/olimex-ltd/SNS-TMP-DS18B20-MAXIM/21662296">link</a></td>
+<td>• Simple PCB interface<br>• No precision analog circuitry required<br>• Factory calibrated</td>
+<td>• Slower response time than exposed RTD<br>• Accuracy lower than PT1000<br>• Less stable long-term</td>
+</tr>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../NTC.png" data-desc-position="bottom"><img alt="image" src="../NTC.png"></a><br><strong>THERM NTC 10KOHM 3988K Probe (B57800K0103A001)</strong><br>$5.22/each<br><a href="https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B57800K0103A001/7099969">link</a></td>
+<td>• Least expensive<br>• High sensitivity<br>• Simple voltage divider readout</td>
+<td>• Non-linear resistance, needs calibration<br>• Accuracy depends heavily on calibration<br>• Self-heating errors if measurement current is too high</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Rationale:</strong> The PT1000 temperature probe was selected because it provides the best accuracy, repeatability, and long-term stability for soil temperature measurement.</p>
 <hr>
 <p><strong>Precision Resistor</strong></p>
