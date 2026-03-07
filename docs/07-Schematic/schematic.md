@@ -15,10 +15,10 @@ The humidity sensor (HDC2080) communicates with the ESP32 over the I²C bus.
 Temperature is measured using a PT1000 resistance temperature detector (RTD). The RTD is driven from a precision 2.5V voltage reference to improve measurement stability and accuracy. The RTD forms a voltage divider with a precision resistor. The resulting voltage is buffered and measured by the ESP32’s ADC to determine the probe’s resistance and corresponding temperature.
 
 
-![schematic](TempHumPicV2.png){style width:"350" height:"300;"}
+![schematic](TEMschem.png){style width:"350" height:"300;"}
 **Figure 1:** Temperature/Humidity Subsystem schematic.
 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](TempHumPrintV2.pdf), and the Zip folder of the project [*here*](TempHumSchem-02-28_144025.zip).
+The schematic as a PDF download is available [*here*](TEMschem.pdf), and the Zip folder of the project [*here*](TempHumSchem-03-06_234213.zip).
