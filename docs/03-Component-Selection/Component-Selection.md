@@ -6,7 +6,6 @@ title: Module's Selected Major Components
 
 The following sections compare the major components required for sensing soil temperature and relative humidity, communicating with the CropScout system, and regulating power from the system power rail. To minimize total system cost while maintaining adequate sensing accuracy and operational reliability, the design selects the PT1000 temperature probe, HDC2080 humidity sensor, MCP6001 op-amp, REF3325 voltage reference, LM2675MX-3.3 switching regulator, RC1206FR-7W10KL precision resistor, PJ-102AH barrel jack, and PH1-16-UA header connector, providing an effective overall cost-to-performance balance for the CropScout sensing module.
 
-
 -----------
 
 **Humidity Sensor**
@@ -35,7 +34,11 @@ The following sections compare the major components required for sensing soil te
 
 **Voltage Reference IC**
 
-*(unchanged — matches BOM)*
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![image](ADR.png)<br>**ADR4525 precision reference**<br>$10.55/each<br>[link](https://www.digikey.com/en/products/detail/analog-devices-inc/ADR4525BRZ-R7/4141690) | • Very low temperature drift for stable ADC measurements<br>• High initial accuracy supports consistent calibration<br>• Low noise improves precision readings | • Higher cost than basic references<br>• Requires careful PCB layout and decoupling<br>• Fixed output voltage |
+| ![image](TL4.png)<br>**TL431A adjustable reference**<br>$0.10/each<br>[link](https://www.digikey.com/en/products/detail/evvo/TL431A/21406979) | • Very inexpensive and widely available<br>• Adjustable output using external resistors<br>• Useful as reference or regulator | • Higher noise and drift<br>• Requires bias current to operate<br>• Accuracy depends on external components |
+| ![image](REF.png)<br>**REF3325 precision reference**<br>$2.18/each<br>[link](https://www.digikey.com/en/products/detail/texas-instruments/REF3325AIRSER/5034447) | • Low quiescent current ideal for battery systems<br>• Good accuracy and low drift<br>• Compatible with many ADC ranges | • Not as low-drift as premium references<br>• Limited output current capability<br>• Requires clean layout for best performance |
 
 **Rationale:** The REF3325 was selected for its balance between precision performance and cost.
 
@@ -55,7 +58,11 @@ The following sections compare the major components required for sensing soil te
 
 **Temperature Sensor**
 
-*(unchanged — matches BOM)*
+| **Component** | **Pros** | **Cons** |
+|---|---|---|
+| ![image](PT1000.png)<br>**PT1000 Temperature Sensor Probe (1597-314010819-ND)**<br>$9.90/each<br>[link](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314010819/22109375) | • Very high accuracy and long-term stability<br>• Excellent repeatability<br>• Wide temperature range (−200°C to 600°C)<br>• Easy calibration | • Requires precision current source<br>• More expensive than thermistors or digital sensors<br>• Wiring resistance must be compensated |
+| ![image](DIGTHERMO.png)<br>**Digital Temperature Probe (SNS-TMP-DS18B20-MAXIM)**<br>$5.33/each<br>[link](https://www.digikey.com/en/products/detail/olimex-ltd/SNS-TMP-DS18B20-MAXIM/21662296) | • Simple PCB interface<br>• No precision analog circuitry required<br>• Factory calibrated | • Slower response time than exposed RTD<br>• Accuracy lower than PT1000<br>• Less stable long-term |
+| ![image](NTC.png)<br>**THERM NTC 10KOHM 3988K Probe (B57800K0103A001)**<br>$5.22/each<br>[link](https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B57800K0103A001/7099969) | • Least expensive<br>• High sensitivity<br>• Simple voltage divider readout | • Non-linear resistance, needs calibration<br>• Accuracy depends heavily on calibration<br>• Self-heating errors if measurement current is too high |
 
 **Rationale:** The PT1000 temperature probe was selected because it provides the best accuracy, repeatability, and long-term stability for soil temperature measurement.
 
