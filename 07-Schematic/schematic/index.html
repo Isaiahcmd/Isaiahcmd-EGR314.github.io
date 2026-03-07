@@ -1107,11 +1107,11 @@
   <h1>Temperature/Humidity Sensor Schematic</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This schematic supports the implementation of the Temperature and Humidity Subsystem module. The board can be powered either independently using a 9V wall adapter or through the team’s shared 9V system rail. These two inputs are combined using P-channel MOSFET power OR-ing, which prevents reverse current flow between sources.</p>
-<p>The combined 9V rail (system rail) is passed through to the downstream board in the system. A local fuse protects only this board’s circuitry from overcurrent conditions. The fused 9V rail is then regulated down to 3.3V using a switching regulator (buck converter).</p>
-<p>The 3.3V rail powers the ESP32 microcontroller and all onboard sensors.</p>
-<p>The humidity sensor (HDC2080) communicates with the ESP32 over the I²C bus. </p>
-<p>Temperature is measured using a PT1000 resistance temperature detector (RTD). The RTD is driven from a precision 2.5V voltage reference to improve measurement stability and accuracy. The RTD forms a voltage divider with a precision resistor. The resulting voltage is buffered and measured by the ESP32’s ADC to determine the probe’s resistance and corresponding temperature.</p>
+<p>This schematic supports the implementation of the Temperature and Humidity Subsystem module. The board can be powered either independently using a 9 V wall adapter through a barrel jack or through the team’s shared 9 V system rail. These two inputs are combined using P-channel MOSFET power OR-ing, which prevents reverse current flow between sources.</p>
+<p>The combined 9 V rail (system rail) is passed through to the downstream board in the system. A local fuse protects only this board’s circuitry from overcurrent conditions. The fused 9 V rail is then regulated down to 3.3 V using a switching regulator (LM2675MX-3.3/NOPB buck converter).</p>
+<p>The regulated 3.3 V rail powers the ESP32-S3 microcontroller and all onboard sensors and support circuitry.</p>
+<p>The humidity sensor (HDC2080) communicates with the ESP32-S3 over the I²C bus using pull-up resistors to ensure stable communication.</p>
+<p>Temperature is measured using a PT1000 resistance temperature detector (RTD). The RTD is driven from a precision 2.5 V voltage reference to improve measurement stability and accuracy. The RTD forms a voltage divider with a precision resistor. The resulting voltage is buffered by an MCP6001 operational amplifier and measured by the ESP32-S3’s ADC to determine the probe’s resistance and corresponding temperature.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../TEMschem.png" data-desc-position="bottom"><img alt="schematic" height:_300_="height:&quot;300;&quot;" src="../TEMschem.png" style="style" width:_350_="width:&quot;350&quot;"></a>
 <strong>Figure 1:</strong> Temperature/Humidity Subsystem schematic.</p>
 <h2 id="resouces">Resouces</h2>
