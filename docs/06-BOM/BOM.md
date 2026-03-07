@@ -10,10 +10,10 @@ Below is the Bill of Materials containing the parts required to build the tempur
 
 
 ## Bill of Materials (Example as Image)
-![](BOM-Screenshot.png){style width: "2000"}
+![](BOMTEMPHUM.png){style width: "2000"}
 **Figure ##:** Temperature/Humidity Subsystem BOM.
 
 
 ## Resouce
 
-The Bill of Material as a PDF download is available [*here*](PDF_For_BOM_EXAMPLE.pdf).
+The Bill of Material as a PDF download is available [*here*](BOMTEMPHUM.pdf).
