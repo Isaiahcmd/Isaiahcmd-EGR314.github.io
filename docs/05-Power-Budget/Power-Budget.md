@@ -10,10 +10,10 @@ Below is the Power Budget Of the Temperature / Humidity sensor subsystem. The po
 
 
 ## Power Budget
-![](BOMTem.png){style width: "2000"}
+![](POWB.png){style width: "2000"}
 **Figure ##:** Temperature/Humidity Subsystem Power Budget.
 
 
 ## Resouce
 
-The Power Budget as a PDF download is available [*here*](BOMTemV2.pdf).
+The Power Budget as a PDF download is available [*here*](POWB.pdf).
