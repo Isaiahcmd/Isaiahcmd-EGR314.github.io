@@ -5,7 +5,7 @@ title: Module's Selected Major Components
 ## Module's Selected Major Components
 
 The following sections compare the major components required for sensing soil temperature and relative humidity, communicating with the CropScout system, and regulating power from the system power rail. 
-To minimize total system cost while maintaining adequate sensing accuracy and operational reliability, the design selects the PT1000 temperature probe, HDC2080 humidity sensor, MCP6001 operational amplifier, REF3325 precision voltage reference, LM2675MX-3.3 switching regulator, RC1206FR-7W10KL precision resistor, PJ-102AH barrel jack, and PH1-16-UA board header connectors, providing an effective overall cost-to-performance balance for the CropScout sensing module.
+To minimize total system cost while maintaining adequate sensing accuracy and operational reliability, the design selects the PT1000 temperature probe, HDC2080 humidity sensor, MCP6001 operational amplifier, REF3325 precision voltage reference, LM2675MX-3.3 switching regulator, RC1206FR-7W10KL precision resistor, PJ-102AH barrel jack, and the 61300811121 board header connectors, providing an effective overall cost-to-performance balance for the CropScout sensing module.
 
 
 -----------
