@@ -44,22 +44,12 @@ The following sections compare the major components required for sensing soil te
 
 | **Component** | **Pros** | **Cons** |
 |---|---|---|
-| ![image](XL.png)<br>**XL1509-3.3 buck regulator**<br>$0.61/each<br>[link](https://www.digikey.com/en/products/detail/umw/XL1509-3.3/24889882?gclsrc=aw.ds&gad_source=4&gad_campaignid=21136823955&gbraid=0AAAAADrbLlghOQE-IwtSJAmaimMc3CB8-&gclid=CjwKCAiAkbbMBhB2EiwANbxtbUOFY1vp_WfZm_yfzUVH2KgDYfhga_t4X1uMC_d3urPPxXmPd3xWThoCNoUQAvD_BwE) | • Simple fixed 3.3 V design<br>• Handles high input voltages<br>• Low cost | • Lower switching frequency requires larger passives<br>• Higher ripple/EMI<br>• Lower efficiency at light loads |
+| ![image](XL.png)<br>**LM2675MX-3.3/NOPB Buck Regulator**<br>$4.80/each<br>[link](https://www.digikey.com/en/products/detail/texas-instruments/LM2675MX-3-3-NOPB/366907) | • Simple fixed 3.3 V design<br>• Reliable switching regulator with well-documented reference designs<br>• Wide input voltage range supports the 9 V system rail | • Larger external components compared to modern high-frequency regulators<br>•Switching noise requires careful PCB layout and filtering<br>• Highest cost |
 | ![image](TPS.png)<br>**TPS62172 synchronous buck**<br>$1.67/each<br>[link](https://www.digikey.com/en/products/detail/texas-instruments/TPS62172DSGT/2781002) | • High efficiency across load range<br>• Smaller external components<br>• Cleaner output rail | • Higher cost<br>• Requires careful layout<br>• Narrower input range |
 | ![image](MP1.png)<br>**MP1584EN buck regulator**<br>$2.75/each<br>[link](https://www.digikey.com/en/products/detail/monolithic-power-systems-inc/MP1584EN-LF-Z/9433299?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gbraid=0AAAAADrbLlhNtrIkwPp0OiJmv8l7g3KB3&gclid=CjwKCAiAkbbMBhB2EiwANbxtbfMqG_6BKipHHG9ByxxlYfOU-f1pC9xHJrSH__PS0RDB2rjvrCsWCBoCJawQAvD_BwE) | • Good performance for cost<br>• Smaller magnetics than older regulators<br>• Widely used design option | • EMI depends heavily on layout<br>• Variant documentation differences<br>• Not ultra-low-noise |
 
 
-**Rationale:** The XL1509-3.3 was selected because it provides the required fixed 3.3 V rail at the lowest cost while supporting a wide input-voltage range.
-
-**MOSFET**
-
-| **Component** | **Pros** | **Cons** |
-|---|---|---|
-| ![image](AO34.png)<br>**AO3407A P-MOSFET**<br>$0.46/each<br>[link](https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO3407A/1855778) | • Low Rds(on) for efficient switching<br>• Compact SOT-23 package<br>• Common high-side switching device | • Limited current handling<br>• Thermal limits of small package<br>• Gate-drive margin must be verified |
-| ![image](SI2.png)<br>**SI2301CDS P-MOSFET**<br>$0.71/each<br>[link](https://www.digikey.com/en/products/detail/vishay-siliconix/SI2301CDS-T1-E3/2622018) | • Good balance of cost and performance<br>• Widely available<br>• Suitable for 3.3 V and 5 V switching | • Slightly higher Rds(on)<br>• Limited dissipation capability<br>• Requires gate resistor design |
-| ![image](DMG.png)<br>**DMG2305UX P-MOSFET**<br>$0.30/each<br>[link](https://www.digikey.com/en/products/detail/diodes-incorporated/DMG2305UX-13/4251560?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLljXIHCKJ57NJE_aqn3jKNSxh&gclid=CjwKCAiAkbbMBhB2EiwANbxtbXC-tmLpWw26TxszAiIrTx22b1P-vNTs2F-fxqSELN_cH8ikjKX3dxoCvEUQAvD_BwE) | • Very low on-resistance<br>• Compact package<br>• Good for moderate current switching | • Thermal limitations<br>• Gate-threshold must be checked<br>• Slightly higher cost |
-
-**Rationale:** The DMG2305UX was selected because it provides the required P-channel high-side switching functionality at the lowest cost while still offering low on-resistance in a compact surface-mount package.
+**Rationale:** The LM2675MX-3.3/NOPB was selected because it provides the required fixed 3.3 V rail and supports a wide input-voltage range, while having very good documentation.
 
 **Temperature Sensor**
 
@@ -85,11 +75,11 @@ The following sections compare the major components required for sensing soil te
 
 | **Component** | **Pros** | **Cons** |
 |---|---|---|
-| ![image](102A.png)<br>**PJ-102A barrel jack**<br>$0.59/each<br>[link](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-102A/275425?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLljXIHCKJ57NJE_aqn3jKNSxh&gclid=CjwKCAiAkbbMBhB2EiwANbxtbQ4bqXD_DcC_vtQ_a9KpprJgPE6ocemjFjgkedDVRx50j8IXPc3cxxoC0EYQAvD_BwE) | • Very common connector footprint<br>• Through-hole mounting provides strong mechanical stability<br>• Suitable for moderate current DC input | • Larger footprint than smaller connectors<br>• Not sealed against moisture or debris<br>• Limited retention strength compared to locking connectors |
+| ![image](102A.png)<br>**PJ-102A barrel jack**<br>$0.59/each<br>[link](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-102AH/408448?s=N4IgTCBcDaIAoCkC0BGADGAggCRAXQF8g) | • Very common connector footprint<br>• Through-hole mounting provides strong mechanical stability<br>• Suitable for moderate current DC input | • Larger footprint than smaller connectors<br>• Not sealed against moisture or debris<br>• Limited retention strength compared to locking connectors |
 | ![image](037A.png)<br>**PJ-037A barrel jack**<br>$0.60/each<br>[link](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices-/PJ-037A/1644545) | • Compact form factor<br>• Good mechanical anchoring for PCB mounting<br>• Widely available from multiple vendors | • Slightly lower current rating<br>• Reduced robustness under repeated insertion cycles<br>• Requires enclosure support |
 | ![image](002A.png)<br>**CUI PJ-002A barrel jack**<br>$0.47/each<br>[link](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices-/PJ-002A/96962?gclsrc=aw.ds&gad_source=4&gad_campaignid=21016330783&gbraid=0AAAAADrbLlhJ4EBBDmQ1gvd8Snk-2l5yC&gclid=CjwKCAiAkbbMBhB2EiwANbxtbTGqU1Yb9pn2fjE5OupA7STVYf9jZ6BFDZZLidFZGeqfxTAWCCCqghoCmEcQAvD_BwE) | • Reliable manufacturer support and documentation<br>• Strong PCB retention due to through-hole mounting<br>• Compatible with standard 5.5 mm / 2.1 mm plugs | • Larger PCB area required<br>• No built-in locking mechanism<br>• Exposed contacts can collect dust/moisture |
 
-**Rationale** The CUI PJ-002A barrel jack was selected because Of its low cost.
+**Rationale** The CUI PJ-102A barrel jack was selected because of its common footprint and mechanical stability.
 
 **8-Pin Connector**
 
