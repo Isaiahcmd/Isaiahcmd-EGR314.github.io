@@ -10,5 +10,6 @@ This page exists to describe and provide resources for viewing and downloading t
 **Figure 1:** Temperature/Humidity Subsystem PCB.
 
 
-A PDF is availible for download here.
-The gerber files for manufacturing are availible for download here.
+## Resources
+A PDF is availible for download[*here*](PCBPDF.pdf)
+The gerber files for manufacturing are availible for download here[*here*](TempHumSchemGBR.zip).
