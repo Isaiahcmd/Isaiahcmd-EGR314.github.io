@@ -39,7 +39,7 @@ Used by the HMI to request the current processed temperature reading.
 
 | Field           | Bytes | Variable Name   | Type (Protocol / Code) | Min Recognized | Max Recognized | Example |
 |----------------|------:|-----------------|------------------------|----------------|----------------|---------|
-| Variable Token | 2     | RT              | char[2]                | RT             | RT             | RT      |
+| Variable Token | 2     | TR              | char[2]                | RT             | RT             | RT      |
 | Separator      | 1     | :               | char                   | :              | :              | :       |
 | Type Identifier| 1     | request_type    | char (`S`)             | S              | S              | S       |
 | Separator      | 1     | :               | char                   | :              | :              | :       |
