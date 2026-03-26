@@ -1024,6 +1024,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#recieved-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recieved Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recieved Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-change-temperature-unit-cu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Change Temperature Unit (CU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-request-temperature-rt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Request Temperature (RT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-request-humidity-rh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Request Humidity (RH)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sent-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sent Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sent Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-temperature-reading-tr-tt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Temperature Reading (TR + TT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-humidity-reading-hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Humidity Reading (HR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1129,6 +1204,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#recieved-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recieved Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recieved Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-change-temperature-unit-cu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Change Temperature Unit (CU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-request-temperature-rt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Request Temperature (RT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-request-humidity-rh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Request Humidity (RH)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sent-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sent Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sent Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-temperature-reading-tr-tt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Temperature Reading (TR + TT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-humidity-reading-hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Humidity Reading (HR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1157,6 +1307,456 @@
 <h2 id="overview">Overview</h2>
 <p>This page exists to describe the aplication programing interface of the temperature/humididty subsystem. 
 Described will be which messages will be read and sent by the subsystem, and how messages not meant for this subsystem will be handeled.</p>
+<h2 id="recieved-messages">Recieved Messages</h2>
+<h3 id="message-change-temperature-unit-cu">Message: Change Temperature Unit (CU)</h3>
+<p>Used to change the temperature unit used by the Temp/Humidity subsystem.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Bytes</th>
+<th>Variable Name</th>
+<th>Type (Protocol / Code)</th>
+<th>Min Recognized</th>
+<th>Max Recognized</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Token</td>
+<td style="text-align: right;">2</td>
+<td>CU</td>
+<td>char[2]</td>
+<td>CU</td>
+<td>CU</td>
+<td>CU</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Type Identifier</td>
+<td style="text-align: right;">1</td>
+<td>unit_type</td>
+<td>char (<code>S</code>)</td>
+<td>S</td>
+<td>S</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Value</td>
+<td style="text-align: right;">1</td>
+<td>requested_unit</td>
+<td>char</td>
+<td>C</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Terminator</td>
+<td style="text-align: right;">1</td>
+<td>;</td>
+<td>char</td>
+<td>;</td>
+<td>;</td>
+<td>;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Message Data Bytes:</strong> 7</p>
+<p><strong>Valid Example Packet:</strong><br>
+<code>AZhtCU:S:F;YB</code></p>
+<p><strong>Meaning:</strong><br>
+- <code>h</code> = HMI<br>
+- <code>t</code> = Temp/Humidity subsystem<br>
+- <code>CU</code> = change unit<br>
+- <code>S</code> = string type<br>
+- <code>F</code> = Fahrenheit</p>
+<h3 id="message-request-temperature-rt">Message: Request Temperature (RT)</h3>
+<p>Used by the HMI to request the current processed temperature reading.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Bytes</th>
+<th>Variable Name</th>
+<th>Type (Protocol / Code)</th>
+<th>Min Recognized</th>
+<th>Max Recognized</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Token</td>
+<td style="text-align: right;">2</td>
+<td>RT</td>
+<td>char[2]</td>
+<td>RT</td>
+<td>RT</td>
+<td>RT</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Type Identifier</td>
+<td style="text-align: right;">1</td>
+<td>request_type</td>
+<td>char (<code>S</code>)</td>
+<td>S</td>
+<td>S</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Value</td>
+<td style="text-align: right;">1</td>
+<td>request_value</td>
+<td>char</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr>
+<td>Terminator</td>
+<td style="text-align: right;">1</td>
+<td>;</td>
+<td>char</td>
+<td>;</td>
+<td>;</td>
+<td>;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Message Data Bytes:</strong> 7</p>
+<p><strong>Valid Example Packet:</strong><br>
+<code>AZhtRT:S:T;YB</code></p>
+<p><strong>Meaning:</strong><br>
+- <code>RT</code> = request temperature<br>
+- <code>T</code> = temperature requested</p>
+<h3 id="message-request-humidity-rh">Message: Request Humidity (RH)</h3>
+<p>Used by the HMI to request the current processed humidity reading.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Bytes</th>
+<th>Variable Name</th>
+<th>Type (Protocol / Code)</th>
+<th>Min Recognized</th>
+<th>Max Recognized</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Token</td>
+<td style="text-align: right;">2</td>
+<td>RH</td>
+<td>char[2]</td>
+<td>RH</td>
+<td>RH</td>
+<td>RH</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Type Identifier</td>
+<td style="text-align: right;">1</td>
+<td>request_type</td>
+<td>char (<code>S</code>)</td>
+<td>S</td>
+<td>S</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Value</td>
+<td style="text-align: right;">1</td>
+<td>request_value</td>
+<td>char</td>
+<td>H</td>
+<td>H</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Terminator</td>
+<td style="text-align: right;">1</td>
+<td>;</td>
+<td>char</td>
+<td>;</td>
+<td>;</td>
+<td>;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Message Data Bytes:</strong> 7</p>
+<p><strong>Valid Example Packet:</strong><br>
+<code>AZhtRH:S:H;YB</code></p>
+<p><strong>Meaning:</strong><br>
+- <code>RH</code> = request humidity<br>
+- <code>H</code> = humidity requested</p>
+<h2 id="sent-messages">Sent Messages</h2>
+<h3 id="message-temperature-reading-tr-tt">Message: Temperature Reading (TR + TT)</h3>
+<p>Used to send the current processed PT1000 temperature and the current temperature unit.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Bytes</th>
+<th>Variable Name</th>
+<th>Type (Protocol / Code)</th>
+<th>Min Recognized</th>
+<th>Max Recognized</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Token</td>
+<td style="text-align: right;">2</td>
+<td>TR</td>
+<td>char[2]</td>
+<td>TR</td>
+<td>TR</td>
+<td>TR</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Type Identifier</td>
+<td style="text-align: right;">1</td>
+<td>temperature_type</td>
+<td>char (<code>F</code>)</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Value</td>
+<td style="text-align: right;">1-7</td>
+<td>temperature_value</td>
+<td>ASCII float / <code>float</code></td>
+<td>-50.0</td>
+<td>200.0</td>
+<td>75.256</td>
+</tr>
+<tr>
+<td>Terminator</td>
+<td style="text-align: right;">1</td>
+<td>;</td>
+<td>char</td>
+<td>;</td>
+<td>;</td>
+<td>;</td>
+</tr>
+<tr>
+<td>Variable Token</td>
+<td style="text-align: right;">2</td>
+<td>TT</td>
+<td>char[2]</td>
+<td>TT</td>
+<td>TT</td>
+<td>TT</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Type Identifier</td>
+<td style="text-align: right;">1</td>
+<td>unit_type</td>
+<td>char (<code>S</code>)</td>
+<td>S</td>
+<td>S</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Value</td>
+<td style="text-align: right;">1</td>
+<td>temperature_unit</td>
+<td>char</td>
+<td>C</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Terminator</td>
+<td style="text-align: right;">1</td>
+<td>;</td>
+<td>char</td>
+<td>;</td>
+<td>;</td>
+<td>;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Message Data Bytes (example shown):</strong> 19</p>
+<p><strong>Valid Example Packet:</strong><br>
+<code>AZthTR:F:75.256;TT:S:F;YB</code></p>
+<p><strong>Meaning:</strong><br>
+- <code>t</code> = Temp/Humidity subsystem<br>
+- <code>h</code> = HMI<br>
+- <code>TR</code> = temperature reading<br>
+- <code>F</code> = float type<br>
+- <code>75.256</code> = current temperature value<br>
+- <code>TT</code> = temperature type/unit<br>
+- <code>S</code> = string type<br>
+- <code>F</code> = Fahrenheit</p>
+<h3 id="message-humidity-reading-hr">Message: Humidity Reading (HR)</h3>
+<p>Used to send the current processed humidity reading.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Bytes</th>
+<th>Variable Name</th>
+<th>Type (Protocol / Code)</th>
+<th>Min Recognized</th>
+<th>Max Recognized</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Token</td>
+<td style="text-align: right;">2</td>
+<td>HR</td>
+<td>char[2]</td>
+<td>HR</td>
+<td>HR</td>
+<td>HR</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Type Identifier</td>
+<td style="text-align: right;">1</td>
+<td>humidity_type</td>
+<td>char (<code>F</code>)</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Value</td>
+<td style="text-align: right;">1-6</td>
+<td>humidity_value</td>
+<td>ASCII float / <code>float</code></td>
+<td>0.0</td>
+<td>100.0</td>
+<td>43.5</td>
+</tr>
+<tr>
+<td>Terminator</td>
+<td style="text-align: right;">1</td>
+<td>;</td>
+<td>char</td>
+<td>;</td>
+<td>;</td>
+<td>;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Message Data Bytes (example shown):</strong> 10</p>
+<p><strong>Valid Example Packet:</strong><br>
+<code>AZthHR:F:43.5;YB</code></p>
+<p><strong>Meaning:</strong><br>
+- <code>HR</code> = humidity reading<br>
+- <code>43.5</code> = current humidity value</p>
 
 
 
