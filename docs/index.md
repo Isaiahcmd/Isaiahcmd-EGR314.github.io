@@ -38,7 +38,7 @@ This subsystem is responsible for providing the user with soil temperature and a
 
 *To veiw the bill of materials of this subsystem for information on materials and parts click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/06-BOM/BOM/])
 
-*To view schematic of this subsystem click [here](https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/10-API/API/)
+*To view schematic of this subsystem click [here]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/10-API/API/])
 
 *To view the ECAD PCB for this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/02-Block-Diagram/Block-Diagram/])
 
