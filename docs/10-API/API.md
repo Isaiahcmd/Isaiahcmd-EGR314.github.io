@@ -8,7 +8,29 @@ Described will be which messages will be read and sent by the subsystem, and how
 
 ## Recieved Messages
 
-### Message: Change Temperature Unit (CU)
+### Message: Broadcast (X) Start TYPE 1
+
+Used by HMI to initialize all systems and ensure board to board communication.
+
+| Field           | Bytes | Variable Name   | Type (Protocol / Code) | Min Recognized | Max Recognized | Example |
+|----------------|------:|-----------------|------------------------|----------------|----------------|---------|
+| Variable Token | 1     | X               | char                   | X              | X              | X       |
+| Separator      | 1     | :               | char                   | :              | :              | :       |
+| Type Identifier| 2     | unit_type       | char (`ST`)            | ST             | ST             | ST      |
+| Separator      | 1     | :               | char                   | :              | :              | :       |
+| Value          | 4     | Start           | char                   | Start          | Start          | Start   |
+| Terminator     | 1     | ;               | char                   | ;              | ;              | ;       |
+
+**Total Message Data Bytes:** 10
+
+**Valid Example Packet:**  
+`AZhX:ST:Start;YB`
+
+**Meaning:**  
+-`X` = Broadcast to everyone
+-`ST` = Start: blink LED
+
+### Message: Change Temperature Unit (CU) TYPE 6
 
 Used to change the temperature unit used by the Temp/Humidity subsystem.
 
@@ -33,13 +55,13 @@ Used to change the temperature unit used by the Temp/Humidity subsystem.
 - `S` = string type  
 - `F` = Fahrenheit
 
-### Message: Request Temperature (RT)
+### Message: Request Temperature (RT) TYPE 6
 
 Used by the HMI to request the current processed temperature reading.
 
 | Field           | Bytes | Variable Name   | Type (Protocol / Code) | Min Recognized | Max Recognized | Example |
 |----------------|------:|-----------------|------------------------|----------------|----------------|---------|
-| Variable Token | 2     | TR              | char[2]                | RT             | RT             | RT      |
+| Variable Token | 2     | TR              | char[2]                | TR             | TR             | TR      |
 | Separator      | 1     | :               | char                   | :              | :              | :       |
 | Type Identifier| 1     | request_type    | char (`S`)             | S              | S              | S       |
 | Separator      | 1     | :               | char                   | :              | :              | :       |
@@ -49,13 +71,13 @@ Used by the HMI to request the current processed temperature reading.
 **Total Message Data Bytes:** 7
 
 **Valid Example Packet:**  
-`AZhtRT:S:T;YB`
+`AZhtTR:S:T;YB`
 
 **Meaning:**  
-- `RT` = request temperature  
+- `TR` = request temperature  
 - `T` = temperature requested
 
-### Message: Request Humidity (RH)
+### Message: Request Humidity (RH) TYPE 6
 
 Used by the HMI to request the current processed humidity reading.
 
@@ -79,7 +101,7 @@ Used by the HMI to request the current processed humidity reading.
 
 ## Sent Messages
 
-### Message: Temperature Reading (TR + TT)
+### Message: Temperature Reading (TR + TT) TYPE 6
 
 Used to send the current processed PT1000 temperature and the current temperature unit.
 
@@ -113,7 +135,7 @@ Used to send the current processed PT1000 temperature and the current temperatur
 - `S` = string type  
 - `F` = Fahrenheit
 
-### Message: Humidity Reading (HR)
+### Message: Humidity Reading (HR) TYPE 6
 
 Used to send the current processed humidity reading.
 
