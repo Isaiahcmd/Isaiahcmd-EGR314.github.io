@@ -1035,27 +1035,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-change-temperature-unit-cu" class="md-nav__link">
+  <a href="#message-broadcast-x-start-type-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Change Temperature Unit (CU)
+      Message: Broadcast (X) Start TYPE 1
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-request-temperature-rt" class="md-nav__link">
+  <a href="#message-change-temperature-unit-cu-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Request Temperature (RT)
+      Message: Change Temperature Unit (CU) TYPE 6
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-request-humidity-rh" class="md-nav__link">
+  <a href="#message-request-temperature-rt-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Request Humidity (RH)
+      Message: Request Temperature (RT) TYPE 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-request-humidity-rh-type-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Request Humidity (RH) TYPE 6
     </span>
   </a>
   
@@ -1077,18 +1086,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-temperature-reading-tr-tt" class="md-nav__link">
+  <a href="#message-temperature-reading-tr-tt-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Temperature Reading (TR + TT)
+      Message: Temperature Reading (TR + TT) TYPE 6
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-humidity-reading-hr" class="md-nav__link">
+  <a href="#message-humidity-reading-hr-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Humidity Reading (HR)
+      Message: Humidity Reading (HR) TYPE 6
     </span>
   </a>
   
@@ -1215,27 +1224,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-change-temperature-unit-cu" class="md-nav__link">
+  <a href="#message-broadcast-x-start-type-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Change Temperature Unit (CU)
+      Message: Broadcast (X) Start TYPE 1
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-request-temperature-rt" class="md-nav__link">
+  <a href="#message-change-temperature-unit-cu-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Request Temperature (RT)
+      Message: Change Temperature Unit (CU) TYPE 6
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-request-humidity-rh" class="md-nav__link">
+  <a href="#message-request-temperature-rt-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Request Humidity (RH)
+      Message: Request Temperature (RT) TYPE 6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-request-humidity-rh-type-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message: Request Humidity (RH) TYPE 6
     </span>
   </a>
   
@@ -1257,18 +1275,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-temperature-reading-tr-tt" class="md-nav__link">
+  <a href="#message-temperature-reading-tr-tt-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Temperature Reading (TR + TT)
+      Message: Temperature Reading (TR + TT) TYPE 6
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-humidity-reading-hr" class="md-nav__link">
+  <a href="#message-humidity-reading-hr-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Humidity Reading (HR)
+      Message: Humidity Reading (HR) TYPE 6
     </span>
   </a>
   
@@ -1308,7 +1326,84 @@
 <p>This page exists to describe the aplication programing interface of the temperature/humididty subsystem. 
 Described will be which messages will be read and sent by the subsystem, and how messages not meant for this subsystem will be handeled.</p>
 <h2 id="recieved-messages">Recieved Messages</h2>
-<h3 id="message-change-temperature-unit-cu">Message: Change Temperature Unit (CU)</h3>
+<h3 id="message-broadcast-x-start-type-1">Message: Broadcast (X) Start TYPE 1</h3>
+<p>Used by HMI to initialize all systems and ensure board to board communication.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: right;">Bytes</th>
+<th>Variable Name</th>
+<th>Type (Protocol / Code)</th>
+<th>Min Recognized</th>
+<th>Max Recognized</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Token</td>
+<td style="text-align: right;">1</td>
+<td>X</td>
+<td>char</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Type Identifier</td>
+<td style="text-align: right;">2</td>
+<td>unit_type</td>
+<td>char (<code>ST</code>)</td>
+<td>ST</td>
+<td>ST</td>
+<td>ST</td>
+</tr>
+<tr>
+<td>Separator</td>
+<td style="text-align: right;">1</td>
+<td>:</td>
+<td>char</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+<tr>
+<td>Value</td>
+<td style="text-align: right;">4</td>
+<td>Start</td>
+<td>char</td>
+<td>Start</td>
+<td>Start</td>
+<td>Start</td>
+</tr>
+<tr>
+<td>Terminator</td>
+<td style="text-align: right;">1</td>
+<td>;</td>
+<td>char</td>
+<td>;</td>
+<td>;</td>
+<td>;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Message Data Bytes:</strong> 10</p>
+<p><strong>Valid Example Packet:</strong><br>
+<code>AZhX:ST:Start;YB</code></p>
+<p><strong>Meaning:</strong><br>
+-<code>X</code> = Broadcast to everyone
+-<code>ST</code> = Start: blink LED</p>
+<h3 id="message-change-temperature-unit-cu-type-6">Message: Change Temperature Unit (CU) TYPE 6</h3>
 <p>Used to change the temperature unit used by the Temp/Humidity subsystem.</p>
 <table>
 <thead>
@@ -1388,7 +1483,7 @@ Described will be which messages will be read and sent by the subsystem, and how
 - <code>CU</code> = change unit<br>
 - <code>S</code> = string type<br>
 - <code>F</code> = Fahrenheit</p>
-<h3 id="message-request-temperature-rt">Message: Request Temperature (RT)</h3>
+<h3 id="message-request-temperature-rt-type-6">Message: Request Temperature (RT) TYPE 6</h3>
 <p>Used by the HMI to request the current processed temperature reading.</p>
 <table>
 <thead>
@@ -1408,9 +1503,9 @@ Described will be which messages will be read and sent by the subsystem, and how
 <td style="text-align: right;">2</td>
 <td>TR</td>
 <td>char[2]</td>
-<td>RT</td>
-<td>RT</td>
-<td>RT</td>
+<td>TR</td>
+<td>TR</td>
+<td>TR</td>
 </tr>
 <tr>
 <td>Separator</td>
@@ -1461,11 +1556,11 @@ Described will be which messages will be read and sent by the subsystem, and how
 </table>
 <p><strong>Total Message Data Bytes:</strong> 7</p>
 <p><strong>Valid Example Packet:</strong><br>
-<code>AZhtRT:S:T;YB</code></p>
+<code>AZhtTR:S:T;YB</code></p>
 <p><strong>Meaning:</strong><br>
-- <code>RT</code> = request temperature<br>
+- <code>TR</code> = request temperature<br>
 - <code>T</code> = temperature requested</p>
-<h3 id="message-request-humidity-rh">Message: Request Humidity (RH)</h3>
+<h3 id="message-request-humidity-rh-type-6">Message: Request Humidity (RH) TYPE 6</h3>
 <p>Used by the HMI to request the current processed humidity reading.</p>
 <table>
 <thead>
@@ -1543,7 +1638,7 @@ Described will be which messages will be read and sent by the subsystem, and how
 - <code>RH</code> = request humidity<br>
 - <code>H</code> = humidity requested</p>
 <h2 id="sent-messages">Sent Messages</h2>
-<h3 id="message-temperature-reading-tr-tt">Message: Temperature Reading (TR + TT)</h3>
+<h3 id="message-temperature-reading-tr-tt-type-6">Message: Temperature Reading (TR + TT) TYPE 6</h3>
 <p>Used to send the current processed PT1000 temperature and the current temperature unit.</p>
 <table>
 <thead>
@@ -1680,7 +1775,7 @@ Described will be which messages will be read and sent by the subsystem, and how
 - <code>TT</code> = temperature type/unit<br>
 - <code>S</code> = string type<br>
 - <code>F</code> = Fahrenheit</p>
-<h3 id="message-humidity-reading-hr">Message: Humidity Reading (HR)</h3>
+<h3 id="message-humidity-reading-hr-type-6">Message: Humidity Reading (HR) TYPE 6</h3>
 <p>Used to send the current processed humidity reading.</p>
 <table>
 <thead>
