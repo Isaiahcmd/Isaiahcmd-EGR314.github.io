@@ -107,7 +107,7 @@ Used to send the current processed PT1000 temperature and the current temperatur
 
 | Field           | Bytes | Variable Name      | Type (Protocol / Code) | Min Recognized | Max Recognized | Example |
 |----------------|------:|--------------------|------------------------|----------------|----------------|---------|
-| Variable Token | 2     | TR                 | char[2]                | TV             | TV             | TC      |
+| Variable Token | 2     | TV                 | char[2]                | TV             | TV             | TV      |
 | Separator      | 1     | :                  | char                   | :              | :              | :       |
 | Type Identifier| 1     | temperature_type   | char (`F`)             | F              | F              | F       |
 | Separator      | 1     | :                  | char                   | :              | :              | :       |
