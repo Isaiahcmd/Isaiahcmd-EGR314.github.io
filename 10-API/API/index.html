@@ -1086,9 +1086,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-temperature-reading-tr-tt-type-6" class="md-nav__link">
+  <a href="#message-temperature-value-tv-tt-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Temperature Reading (TR + TT) TYPE 6
+      Message: Temperature Value (TV + TT) TYPE 6
     </span>
   </a>
   
@@ -1275,9 +1275,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-temperature-reading-tr-tt-type-6" class="md-nav__link">
+  <a href="#message-temperature-value-tv-tt-type-6" class="md-nav__link">
     <span class="md-ellipsis">
-      Message: Temperature Reading (TR + TT) TYPE 6
+      Message: Temperature Value (TV + TT) TYPE 6
     </span>
   </a>
   
@@ -1638,7 +1638,7 @@ Described will be which messages will be read and sent by the subsystem, and how
 - <code>RH</code> = request humidity<br>
 - <code>H</code> = humidity requested</p>
 <h2 id="sent-messages">Sent Messages</h2>
-<h3 id="message-temperature-reading-tr-tt-type-6">Message: Temperature Reading (TR + TT) TYPE 6</h3>
+<h3 id="message-temperature-value-tv-tt-type-6">Message: Temperature Value (TV + TT) TYPE 6</h3>
 <p>Used to send the current processed PT1000 temperature and the current temperature unit.</p>
 <table>
 <thead>
@@ -1658,9 +1658,9 @@ Described will be which messages will be read and sent by the subsystem, and how
 <td style="text-align: right;">2</td>
 <td>TR</td>
 <td>char[2]</td>
-<td>TR</td>
-<td>TR</td>
-<td>TR</td>
+<td>TV</td>
+<td>TV</td>
+<td>TC</td>
 </tr>
 <tr>
 <td>Separator</td>
@@ -1765,11 +1765,11 @@ Described will be which messages will be read and sent by the subsystem, and how
 </table>
 <p><strong>Total Message Data Bytes (example shown):</strong> 19</p>
 <p><strong>Valid Example Packet:</strong><br>
-<code>AZthTR:F:75.256;TT:S:F;YB</code></p>
+<code>AZthTV:F:75.256;TT:S:F;YB</code></p>
 <p><strong>Meaning:</strong><br>
 - <code>t</code> = Temp/Humidity subsystem<br>
 - <code>h</code> = HMI<br>
-- <code>TR</code> = temperature reading<br>
+- <code>TV</code> = temperature value<br>
 - <code>F</code> = float type<br>
 - <code>75.256</code> = current temperature value<br>
 - <code>TT</code> = temperature type/unit<br>
