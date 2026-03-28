@@ -101,13 +101,13 @@ Used by the HMI to request the current processed humidity reading.
 
 ## Sent Messages
 
-### Message: Temperature Reading (TR + TT) TYPE 6
+### Message: Temperature Value (TV + TT) TYPE 6
 
 Used to send the current processed PT1000 temperature and the current temperature unit.
 
 | Field           | Bytes | Variable Name      | Type (Protocol / Code) | Min Recognized | Max Recognized | Example |
 |----------------|------:|--------------------|------------------------|----------------|----------------|---------|
-| Variable Token | 2     | TR                 | char[2]                | TR             | TR             | TR      |
+| Variable Token | 2     | TR                 | char[2]                | TV             | TV             | TC      |
 | Separator      | 1     | :                  | char                   | :              | :              | :       |
 | Type Identifier| 1     | temperature_type   | char (`F`)             | F              | F              | F       |
 | Separator      | 1     | :                  | char                   | :              | :              | :       |
@@ -123,12 +123,12 @@ Used to send the current processed PT1000 temperature and the current temperatur
 **Total Message Data Bytes (example shown):** 19
 
 **Valid Example Packet:**  
-`AZthTR:F:75.256;TT:S:F;YB`
+`AZthTV:F:75.256;TT:S:F;YB`
 
 **Meaning:**  
 - `t` = Temp/Humidity subsystem  
 - `h` = HMI  
-- `TR` = temperature reading  
+- `TV` = temperature value  
 - `F` = float type  
 - `75.256` = current temperature value  
 - `TT` = temperature type/unit  
