@@ -28,13 +28,13 @@ This subsystem existes to allow users to remotely observe soil temperature and r
 
 This subsystem is responsible for providing the user with soil temperature and ambient reletive humidity data.
 
-*To veiw the block diagram of this subsystem for information on the general layout of this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/02-Block-Diagram/Block-Diagram/])
+*To veiw the block diagram of this subsystem for information on the general layout of this subsystem click ["here".](https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/02-Block-Diagram/Block-Diagram/)
 
-*To view the component selection process of this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/03-Component-Selection/Component-Selection/])
+*To view the component selection process of this subsystem click ["here".](https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/03-Component-Selection/Component-Selection/)
 
-*To view the microcontroller selection process of this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/04-Microcontroller-Selection/Microcontroller-Selection/])
+*To view the microcontroller selection process of this subsystem click ["here".](https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/04-Microcontroller-Selection/Microcontroller-Selection/)
 
-*To view the power budget of this subsystem click ["here".]([https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/05-Power-Budget/Power-Budget/])
+*To view the power budget of this subsystem click ["here".](https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/05-Power-Budget/Power-Budget/)
 
 *To veiw the bill of materials of this subsystem for information on materials and parts click ["here".](https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/06-BOM/BOM/)
 
