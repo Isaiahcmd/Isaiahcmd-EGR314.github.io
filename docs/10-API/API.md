@@ -1,6 +1,7 @@
 ---
-title: Tempurature/Humidity API
+title: MTempurature/Humidity API
 ---
+
 
 ## Overview
 This page exists to describe the aplication programing interface of the temperature/humididty subsystem. 
