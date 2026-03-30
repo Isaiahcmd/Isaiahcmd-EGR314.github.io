@@ -20,7 +20,7 @@ theme:
     - navigation.top
     - navigation.path
     - navigation.indexes
-    - navigation.prune
+   # - navigation.prune
     - content.action.edit
     - navigation.footer
     - navigation.sections
