@@ -15,12 +15,12 @@ theme:
 
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
+    #navigation.tabs.sticky
     - toc.follow    
     - navigation.top
     - navigation.path
     - navigation.indexes
-   # - navigation.prune
+    - navigation.prune
     - content.action.edit
     - navigation.footer
     - navigation.sections
