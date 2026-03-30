@@ -1,5 +1,5 @@
 ---
-title: MTempurature/Humidity API
+title: Tempurature-Humidity API
 ---
 
 
