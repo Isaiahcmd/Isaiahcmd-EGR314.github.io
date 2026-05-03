@@ -1,11 +1,10 @@
 site_name: EGR 314 Isaiah Johnston Datasheet
-site_url: https://isaiahcmd.github.io/Isaiahcmd-EGR314.github.io/
-repo_url: https://github.com/Isaiahcmd/Isaiahcmd-EGR314.github.io
+site_url: https://embedded-systems-design.github.io/EGR314DataSheetTemplate
+repo_url: https://github.com/embedded-systems-design/EGR314DataSheetTemplate
 edit_uri: edit/main/docs/
-
 theme:
   name: material
-  custom_dir: custom_theme/partials
+  custom_dir: custom_theme/
   palette:
     primary: blue
     accent: indigo
@@ -17,18 +16,20 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.tabs.overflow
-    - toc.follow
+    - toc.follow    
     - navigation.top
     - navigation.path
     - navigation.indexes
-    - navigation.expand
+   # - navigation.prune
     - content.action.edit
     - navigation.footer
+    - navigation.sections
+    - navigation.expand
+#    - navigation.instant # doesn't work that well
 
 markdown_extensions:
-  - attr_list
-  - md_in_html
+  - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - md_in_html # see https://squidfunk.github.io/mkdocs-material/reference/images/
   - footnotes
   - pymdownx.arithmatex:
       generic: true
@@ -39,39 +40,30 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
+draft_docs: |
+  **/*_unpublished.md
+  **/*_draft.md
+  **/*_draft**
+  
 plugins:
   - search
-  - glightbox
+  - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra.css  
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
+ - javascripts/mathjax.js
+ - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    
 not_in_nav: |
   static
-
-copyright: "Copyright © 2026 Isaiah Johnston"
+  
+copyright: "Copyright &copy; 2026 Isaiah Johnston"
 
 extra:
   generator: false
   social:
     - icon: fontawesome/regular/file-code
       link: /2026_spring
-      name: 2023 Site
-
-nav:
-  - Home: index.md
-  - Requirements: 01-Requirements/Requirements.md
-  - Block Diagram: 02-Block-Diagram/Block-Diagram.md
-  - Component Selection: 03-Component-Selection/Component-Selection.md
-  - Microcontroller Selection: 04-Microcontroller-Selection/Microcontroller-Selection.md
-  - Power Budget: 05-Power-Budget/Power-Budget.md
-  - BOM: 06-BOM/BOM.md
-  - Schematic: 07-Schematic/schematic.md
-  - PCB: 08-PCB/pcb.md
-  - Reflection: 09-Reflection/Reflection.md
-  - API: 10-API/test2.md
-  - Appendix: Appendix/index.md
+      name: 2023 Site    
