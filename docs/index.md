@@ -24,19 +24,7 @@ This data sheet exists to describe the design and function of the temperature / 
 
 This subsystem existes to allow users to remotely observe soil temperature and relative humidity levels as part of the CropScout exploritory drone.
 A link to the full product report can be found [here.](https://EGR314-S-2026-202.github.io)
-The Cropscout prototype, as it stands now, has a fully functioning robotic 3 degree of freedom arm with a tempurature probe end effector.
-The body of the rover houses an ambient humidity sensor, and the PCB's and the motors. 
-All data is sent via wifi to an MQTT server where it is recivied by the human machine interface (HMI). 
-Commands can be given by the HMI and recieved by the sensors and motor control units in the same manner.
-The motors have partial functionality and the broadcast message gets stuck in the motor PCB at this point in time. 
-The issue is suspected to be in the software of the motor PCB. 
-More work will have to be done to achive full functionality.
-The metal detecting subsystem is currently fully non functional but showed base line funtionality in early testing. A complete redesign of the subsystem is needed.
-The pressure sensing subsystem was never created, a complete redesign and testing will be needed to integrate it.
-Noise was an issue for the sensors, occasionally a corrupted character will make it into the string recieved by the HMI.
-The soil tempurature probe needs a more thorough calibration.
-It is recomended the probe be submerged in ice water for 10 minutes and the temperature be set at 0°C then submerged in boiling water and the temperature be set at 100°C.
-The temurature subsystem has noise in the line and requires some smoothing by hardware changes, software smothing or a combination. 
+
 
 ### My Contribution
 
