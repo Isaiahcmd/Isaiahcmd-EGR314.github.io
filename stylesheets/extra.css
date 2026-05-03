@@ -1,24 +1,12 @@
-article a {
-    font-style: italic;
+article{
+    a {
+        font-style:italic;
+        }
 }
 
-blockquote {
+blockquote{
     background: #ffc;
-}
-
-blockquote p,
-blockquote li {
-    color: var(--md-typeset-color);
-}
-
-
-.md-tabs__list {
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-}
-
-.md-tabs__item {
-    flex: 0 0 auto;
+    p,li{
+        color: var(--md-typeset-color);
+    }
 }
