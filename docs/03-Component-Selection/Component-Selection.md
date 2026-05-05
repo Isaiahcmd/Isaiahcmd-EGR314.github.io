@@ -92,8 +92,18 @@ To minimize total system cost while maintaining adequate sensing accuracy and op
 
 **Rationale** The 61300811121 right-angle header was selected because it offers the simplest and most cost-effective 8-pin interconnect option while remaining easy to assemble and test.
 
+**Selected Components**
+
+| **Component** | **Description** |
+|---|---|
+| HDC2080 | Digital humidity sensor |
+| MCP6001 | Op-Amp, smooths and amplifies signal |
+| REF3325 | Persicion voltage reference |
+| LM2675MX-3.3/NOPB | Voltage regulator |
+| PT1000 | Temperature sensor |
+| RC0603BR-0710KL | Persicion resistor |
+| CUI PJ-102A | Barrel jack |
+| 61300811121 | 8-pin header |
 
 
 
-
-can you edit this to reflect the changes
