@@ -105,5 +105,14 @@ To minimize total system cost while maintaining adequate sensing accuracy and op
 | CUI PJ-102A | Barrel jack |
 | 61300811121 | 8-pin header |
 
+**ESP32 Pinout Table**
+
+| **Component** | **Pin # (Physical)** |
+|---|---|
+| HDC2080 | 12 (Data), 17 (clock)|
+| LM2675MX-3.3/NOPB (+3.3V)| 2 |
+| PT1000 | 6 |
+| Pin 2 (out) | 10 |
+| Pin 2 (in) | 11 |
 
 
