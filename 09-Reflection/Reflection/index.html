@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#module" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -668,6 +673,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Reflection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -677,6 +693,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-up-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Up Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lessons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-5-recomendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top 5 Recomendations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -740,6 +809,50 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-up-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Up Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lessons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-5-recomendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top 5 Recomendations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -763,6 +876,30 @@
 
   <h1>Reflection</h1>
 
+<h2 id="module">Module</h2>
+<p>Overall this subsystem was a success. 
+It senses, temperature and humidity, and it communicates with all other boards in the system. 
+It should have been calibrated better, and it needs some smoothing to attenuate the noise that ends up in the data lines both on the board and through out the system. 
+To remake this I would choose higher tolerance capacitors and resistors for the on board data lines and perhaps filter the signal more.</p>
+<h2 id="start-up-tips">Start Up Tips</h2>
+<p>Come up with an Idea first very general, I Know I'm making a land based rover for primarily agriculture exploration, what should a rover have, then start throwing ideas at the wall. It doesn't matter if they seem dumb in the moment, write them all down the useful obvious ones, the cool ones, the funny ones and the dumb ones. Once you have about 100 start narrowing them down. When you decide on what you want start researching how those systems work. Once you know how they work it is only a matter of selecting components, meeting the budget and other requirements, designing the circuit, and building the thing.</p>
+<h2 id="lessons">Lessons</h2>
+<ul>
+<li>Read datasheets carefully</li>
+<li>Don't bet on components remaining in stock have backup options in your price range preselected.</li>
+<li>Make sure all of your design checkers pass</li>
+<li>Make sure you know how your circuit works, in and out. Know why each component exists.</li>
+<li>Take your time with soldering, do not rush, it will cost you more time.</li>
+<li>Be excited about what you are creating.</li>
+</ul>
+<h2 id="top-5-recomendations">Top 5 Recomendations</h2>
+<ol>
+<li>Use VSCode for everything, mpremote for python, and platformio for C.</li>
+<li>Triple check your connection headers match your teammates.</li>
+<li>LEDs are very important for debugging the need to be on your board, Not optional.</li>
+<li>Debug your code with more code. Add lines to make your code reply simply in serial in trouble areas to help identify where the code is breaking.</li>
+<li>If you can somehow go back in time and become very proficient in coding before this class do that.</li>
+</ol>
 
 
 
@@ -770,6 +907,8 @@
 
 
 
+  
+  
 
 
 
